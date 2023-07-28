@@ -10,6 +10,7 @@ public class UI_Manager : MonoBehaviour
     public UI_ItemPanel itemPanel;
     public UI_Clock clock;
     public UI_Alert alert;
+    public UI_BottomButtons bottomButtons;
 
     private void Awake()
     {
