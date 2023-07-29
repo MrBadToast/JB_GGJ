@@ -51,6 +51,11 @@ public class MainGameManager : MonoBehaviour
         }
     }
 
+    public Item_Data GetItem(int num)
+    {
+        return inventory[num];
+    }
+
     public bool RemoveItemAt(int index)
     {
         if (inventory.Count < index) return false;
