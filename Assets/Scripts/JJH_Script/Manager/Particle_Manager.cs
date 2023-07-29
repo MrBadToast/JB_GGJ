@@ -26,7 +26,7 @@ public class Particle_Manager : MonoBehaviour
         }
         set_particle.gameObject.SetActive(true);
         set_particle.Play();
-        Invoke("disable", time + 0.5f);
+        Invoke("disable", time + 2f);
     }
 
     void disable() { this.gameObject.SetActive(false); }
