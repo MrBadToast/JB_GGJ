@@ -5,25 +5,17 @@ using DG.Tweening;
 
 public class Toggle_Object : MonoBehaviour
 {
-    Item_Data data;
-    SpriteRenderer srr;
-    bool Toggle;
-
+    public SpriteRenderer OFF;
+    public SpriteRenderer ON;
+    public bool Toggle;
     private void Awake()
     {
-        srr = GetComponent<SpriteRenderer>();
+        On_Click();
     }
-
-    public void Set_Obj(Item_Data _data)
-    {
-        data = _data;
-        srr.sprite = data.Item_sprite;
-    }
-
     public void On_Click()
     {
         Toggle = (Toggle ? false : true);
-        if (Toggle) { srr.DOColor(Color.blue, 0.6f).SetEase(Ease.Linear); }
-        else { srr.DOColor(Color.red, 0.6f).SetEase(Ease.Linear); }
+        if (Toggle) { OFF.DOFade(0, 0.6f).SetEase(Ease.Linear); ON.DOFade(1, 0.6f).SetEase(Ease.Linear); }
+        else { OFF.DOFade(1, 0.6f).SetEase(Ease.Linear); ON.DOFade(0, 0.6f).SetEase(Ease.Linear); }
     }
 }
