@@ -12,6 +12,11 @@ public class UI_Score : MonoBehaviour
 
     private DOTweenAnimation doAnimation;
 
+    private void Awake()
+    {
+        doAnimation = GetComponent<DOTweenAnimation>();
+    }
+
     public void OpenScore()
     {
         doAnimation.DORestartById("Score_Open");

@@ -1,4 +1,4 @@
-using DG.Tweening;
+using FMODUnity;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,6 +17,11 @@ public class MainGameManager : MonoBehaviour
     [SerializeField] private int maxScore = 1000;
     [SerializeField] private int score = 0;
     public int Score { get { return score; } }
+
+    public EventReference sound_earthquake;
+    public EventReference sound_storm;
+    public EventReference sound_pest;
+    public EventReference sound_dog;
 
     [Title("RegularIncounter Info")]
     public float regularIncounter = 60f * 30f;
@@ -79,11 +84,10 @@ public class MainGameManager : MonoBehaviour
         var item = inventory[pickedIndex];
         GameObject act_Room = null;
         foreach (Room_Data room in rooms.rooms) { if (room.gameObject.activeSelf) { act_Room = room.gameObject; break; } }
-        Dragable_Object d_obj = Object_Pool.SpawnFromPool<Dragable_Object>("Dragable_Object", Camera.main.ScreenToWorldPoint(Input.mousePosition) + (Vector3.forward * 9));
+        Dragable_Object d_obj = Object_Pool.SpawnFromPool<Dragable_Object>("Dragable_Object", Vector3.zero);
         d_obj.transform.SetParent(act_Room.transform);
         d_obj.Set_Obj(item);
-        d_obj.transform.DOMoveX(Random.Range(-0.1f, 0.1f), 0.5f);
-        d_obj.transform.DOMoveY(Random.Range(-0.1f, 0.1f), 0.2f).SetLoops(1, LoopType.Yoyo);
+        d_obj.transform.position = act_Room.transform.position + Vector3.back;
         UI_Manager.Instance.itemPanel.Deselect();
         RemoveItemAt(pickedIndex);
         pickedIndex = -1;
@@ -95,6 +99,11 @@ public class MainGameManager : MonoBehaviour
         { score = 0; UI_Manager.Instance.score.SetCurrentScore(score); }
         else if (score + value > 1000) { score = 1000; UI_Manager.Instance.score.SetCurrentScore(score,true); }
         else { score += value; UI_Manager.Instance.score.SetCurrentScore(score); }
+    }
+
+    public void AddElapsedTime(float value)
+    {
+        elapsedTime += value;
     }
 
     public void StartMainGameSequence()
@@ -151,15 +160,19 @@ public class MainGameManager : MonoBehaviour
                     {
                         case 0:
                             UI_Manager.Instance.alert.InvokeAlert("지진 발생! 집안이 마구 흔들립니다!");
+                            RuntimeManager.PlayOneShot(sound_earthquake);
                             break;
                         case 1:
                             UI_Manager.Instance.alert.InvokeAlert("폭우 발생! 집에 물난리가 납니다!");
+                            RuntimeManager.PlayOneShot(sound_storm);
                             break;
                         case 2:
                             UI_Manager.Instance.alert.InvokeAlert("비상! 벌레가 집을 더럽힙니다!");
+                            RuntimeManager.PlayOneShot(sound_pest);
                             break;
                         case 3:
                             UI_Manager.Instance.alert.InvokeAlert("강아지 탈출! 강아지가 집을 어지럽힙니다!");
+                            RuntimeManager.PlayOneShot(sound_dog);
                             break;
                     }
                 }
@@ -175,5 +188,7 @@ public class MainGameManager : MonoBehaviour
             yield return null;
 
         }
+
+
     }
 }
