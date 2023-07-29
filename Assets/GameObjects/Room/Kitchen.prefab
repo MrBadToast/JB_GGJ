@@ -2676,7 +2676,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 371793618304413498, guid: e13d6410ef1be3741a86b4deb6c76f4a, type: 3}
       propertyPath: m_Name
-      value: Toggle_Obj (3)
+      value: WorkTable
       objectReference: {fileID: 0}
     - target: {fileID: 371793618304413498, guid: e13d6410ef1be3741a86b4deb6c76f4a, type: 3}
       propertyPath: m_IsActive

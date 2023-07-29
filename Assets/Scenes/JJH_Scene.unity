@@ -1707,7 +1707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3843459771613961737, guid: eb3817d87bd737649845fb9d80608175, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4084053571737030081, guid: eb3817d87bd737649845fb9d80608175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1831,6 +1831,10 @@ PrefabInstance:
     - target: {fileID: 3473209619900184703, guid: f350f2bd132777b488f1ab297cc11a46, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920471109458390301, guid: f350f2bd132777b488f1ab297cc11a46, type: 3}
+      propertyPath: m_Name
+      value: WorkTable
       objectReference: {fileID: 0}
     - target: {fileID: 6631725460202169480, guid: f350f2bd132777b488f1ab297cc11a46, type: 3}
       propertyPath: serializationData.Prefab
@@ -2103,6 +2107,10 @@ PrefabInstance:
     - target: {fileID: 8379708438670521356, guid: 0102ff293dd0a924fbc0dfa5629fbb2b, type: 3}
       propertyPath: m_Name
       value: Bath_Switch
+      objectReference: {fileID: 0}
+    - target: {fileID: 9087097112199665387, guid: 0102ff293dd0a924fbc0dfa5629fbb2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
