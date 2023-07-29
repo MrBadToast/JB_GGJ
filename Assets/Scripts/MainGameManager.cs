@@ -1,6 +1,7 @@
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -9,10 +10,18 @@ public class MainGameManager : MonoBehaviour
     static private MainGameManager instance;
     public static MainGameManager Instance { get { return instance; } }
 
-    [SerializeField] private float gameTime = 60f;
+    [SerializeField] private float fullGameTime = 60f*60f*9f;
+    [SerializeField] private float timeSpeedMultiplier = 30f;
+    [SerializeField] private int maxScore = 1000;
     public int score = 0;
-    [SerializeField,MinMaxSlider(1.0f,5.0f)] private Vector2 randomIncidentInterval;
-    [SerializeField] private float lastIncidentTime = 50f;
+
+    [Title("RegularIncounter Info")]
+    public float regularIncounter = 60f * 30f;
+    public float incounterRate = 0.66f;
+
+    [Title("TimeUse")]
+    public float time_roomMove = 30f;
+    public float time_objectInteract = 40f;
 
     private List<Item_Data> inventory = new List<Item_Data>();
     public List<Item_Data> Inventory { get { return inventory; } }
@@ -22,9 +31,9 @@ public class MainGameManager : MonoBehaviour
     public MultipleRoomsManager rooms;
     public DialogueContainer dialogueCont;
 
-    private float elapsedTime = 0f;
+    private float elapsedTime = 0;
     public float ElapsedTime { get { return elapsedTime; } }
-    public float ElapsedTime01 { get { return Mathf.Clamp01(elapsedTime / gameTime); } }
+    public float ElapsedTime01 { get { return Mathf.Clamp01(elapsedTime / fullGameTime); } }
 
     bool sequenceRunning = false;
 
@@ -87,8 +96,6 @@ public class MainGameManager : MonoBehaviour
         rooms.SpawnIncident(roomIndex);
     }
 
-    float incidentTimer = 0f;
-
     private bool TryItem(int index)
     {
         if (index > inventorySize) return false;
@@ -118,26 +125,43 @@ public class MainGameManager : MonoBehaviour
 
         UI_Manager.Instance.StartOpen();
 
-        float nextIncidentTime = Random.Range(randomIncidentInterval.x, randomIncidentInterval.y);
+        float regularIncounterTimer = 0f;
 
-        while(elapsedTime > gameTime)
+        while (elapsedTime < fullGameTime)
         {
-            if (incidentTimer < lastIncidentTime)
+            //regular incounter
+            if (regularIncounter < regularIncounterTimer)
             {
-                incidentTimer += Time.deltaTime;
+                if (Random.Range(0f, 1f) < incounterRate)
+                {
+                    int task = Random.Range(0, 3);
+                    switch (task)
+                    {
+                        case 0:
+                            UI_Manager.Instance.alert.InvokeAlert("지진 발생! 집안이 마구 흔들립니다!");
+                            break;
+                        case 1:
+                            UI_Manager.Instance.alert.InvokeAlert("폭우 발생! 집에 물난리가 납니다!");
+                            break;
+                        case 2:
+                            UI_Manager.Instance.alert.InvokeAlert("비상! 벌레가 집을 더럽힙니다!");
+                            break;
+                        case 3:
+                            UI_Manager.Instance.alert.InvokeAlert("강아지 탈출! 강아지가 집을 어지럽힙니다!");
+                            break;
+                    }
+                }
+
+                regularIncounterTimer = 0f;
+                score = Mathf.Clamp(score, 0, maxScore);
+
             }
 
-            if(incidentTimer > nextIncidentTime)
-            {
-                InvokeIncident(Random.Range(0, rooms.RoomCount));
-                incidentTimer = 0f;
-                nextIncidentTime = Random.Range(randomIncidentInterval.x, randomIncidentInterval.y);
-            }
-
-            elapsedTime += Time.deltaTime;
+            UI_Manager.Instance.clock.SetClock(ElapsedTime01);
+            regularIncounterTimer += Time.deltaTime * timeSpeedMultiplier;
+            elapsedTime += Time.deltaTime * timeSpeedMultiplier;
             yield return null;
+
         }
     }
-
-
 }

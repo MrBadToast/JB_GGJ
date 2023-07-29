@@ -13,9 +13,9 @@ public class UI_Clock : MonoBehaviour
 
     public void SetClock(float value)
     {
-        renderer.material.SetFloat("_Value", value);
-        hour.rotation = Quaternion.Euler(0f, 0f, value * 360f);
-        minute.rotation = Quaternion.Euler(0f, 0f, value * 360f * 12f);
+        renderer.material.SetFloat("_Value", Mathf.Lerp(0.25f,1.0f,value));
+        hour.rotation = Quaternion.Euler(0f, 0f, Mathf.Lerp(90f,-180f,value)); ;
+        minute.rotation = Quaternion.Euler(0f, 0f, -value * 360f * 9f);
     }
 
     public void OpenClock()

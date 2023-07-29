@@ -1352,10 +1352,10 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -472466490
-      Data2: 1158081512
-      Data3: -458808146
-      Data4: 1866542007
+      Data1: -1250556909
+      Data2: 1246767759
+      Data3: 1472618633
+      Data4: 16881858
     Path: event:/Sweep
   Event: 
   PlayEvent: 0
