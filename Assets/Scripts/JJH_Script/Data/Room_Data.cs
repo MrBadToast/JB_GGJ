@@ -40,8 +40,8 @@ public class Room_Data : SerializedMonoBehaviour
         PolygonCollider2D set_bound = Spawn_pos[set_key];
         Vector2 set_pos = Vector2.zero;
         Item_Data set_item = null;
-        if (Items[set_key].Count != 0) { set_item = Items[set_key][Random.Range(0, Items[set_key].Count)]; }
-        else { return; }
+        try { set_item = Items[set_key][Random.Range(0, Items[set_key].Count)]; }
+        catch { return; }
         // 선택된 아이템이 fix 인지 아닌지 따라 고정이거나 범위 내 랜덤 좌표
         if (set_item.IsFix) { set_pos = set_bound.transform.position; } 
         else
