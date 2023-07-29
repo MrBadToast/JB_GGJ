@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e568ac68e8c4054e89fa538134fc8b0, type: 3}
-  m_Name: Test
+  m_Name: ClicK_Test
   m_EditorClassIdentifier: 
   Item_name: test
   Item_sprite: {fileID: -5177388603050735206, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}

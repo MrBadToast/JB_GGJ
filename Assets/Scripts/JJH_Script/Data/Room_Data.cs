@@ -3,12 +3,12 @@ using Sirenix.Serialization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Room_Data : SerializedMonoBehaviour
 {
     public string Room_name;
     public Dictionary<string, PolygonCollider2D> Spawn_pos = new Dictionary<string, PolygonCollider2D>();
     public Dictionary<string, List<Item_Data>> Items = new Dictionary<string, List<Item_Data>>();
+    public Dictionary<string, Toggle_Object> Toggles = new Dictionary<string, Toggle_Object>();
 
     List<string> keys = new List<string>();
 
@@ -81,13 +81,18 @@ public class Room_Data : SerializedMonoBehaviour
         {
             case Item_Type.Click:
                 Clickable_Object c_obj = Object_Pool.SpawnFromPool<Clickable_Object>("Clickable_Object", set_pos);
+                c_obj.transform.SetParent(this.transform);
                 c_obj.Set_Obj(set_item);
                 break;
             case Item_Type.Drag:
                 Dragable_Object d_obj = Object_Pool.SpawnFromPool<Dragable_Object>("Dragable_Object", set_pos);
+                d_obj.transform.SetParent(this.transform);
                 d_obj.Set_Obj(set_item);
                 break;
-            case Item_Type.Toggle:
+            case Item_Type.Scrub:
+                Scrubable_Object s_obj = Object_Pool.SpawnFromPool<Scrubable_Object>("Scrubable_Object", set_pos);
+                s_obj.transform.SetParent(this.transform);
+                s_obj.Set_Obj(set_item);
                 break;
         }
         foreach (string Key in Spawn_pos.Keys) { Spawn_pos[Key].enabled = false; }
