@@ -803,7 +803,6 @@ GameObject:
   - component: {fileID: 7123860384973311718}
   - component: {fileID: 7123860384973311719}
   - component: {fileID: 7123860384973311712}
-  - component: {fileID: 7123860384973311713}
   - component: {fileID: 1852185961536239977}
   m_Layer: 5
   m_Name: Large_Dialogue
@@ -878,23 +877,6 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &7123860384973311713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7123860384973311714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 55
 --- !u!114 &1852185961536239977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -913,7 +895,31 @@ MonoBehaviour:
   fullImageUI_B: {fileID: 8527781083109067912}
   DialogueGroup: {fileID: 7123860384194457940}
   triangle: {fileID: 7123860384331669562}
-  test_dialogues: []
+  test_dialogues:
+  - speecher: Speecher
+    SpeecherColor: {r: 0, g: 0, b: 0, a: 0}
+    context: Test1
+    fullImage: {fileID: 0}
+    actions:
+      m_PersistentCalls:
+        m_Calls: []
+    disableCrossfade: 0
+  - speecher: Speecher
+    SpeecherColor: {r: 0, g: 0, b: 0, a: 0}
+    context: Test2
+    fullImage: {fileID: 0}
+    actions:
+      m_PersistentCalls:
+        m_Calls: []
+    disableCrossfade: 0
+  - speecher: Speecher
+    SpeecherColor: {r: 0, g: 0, b: 0, a: 0}
+    context: Test3
+    fullImage: {fileID: 0}
+    actions:
+      m_PersistentCalls:
+        m_Calls: []
+    disableCrossfade: 0
 --- !u!1 &7123860385680851585
 GameObject:
   m_ObjectHideFlags: 0

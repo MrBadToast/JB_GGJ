@@ -46,4 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameTime: 60
   score: 0
+  randomIncidentInterval: {x: 2.0813303, y: 3.9463568}
+  lastIncidentTime: 50
   rooms: {fileID: 0}
+  dialogueCont: {fileID: 0}

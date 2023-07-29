@@ -75,14 +75,14 @@ public class MainGameManager : MonoBehaviour
 
     public void InvokeIncident(int roomIndex)
     {
-
+        rooms.SpawnIncident(roomIndex);
     }
 
     float incidentTimer = 0f;
 
     private IEnumerator Cor_MainGameSequence()
     {
-        yield return dialogueCont.StartCoroutine(dialogueCont.StartLargeDialogue("IntroCutscene"));
+        //yield return dialogueCont.StartCoroutine(dialogueCont.StartLargeDialogue("IntroCutscene"));
 
         yield return new WaitForSeconds(2f);
 
@@ -94,7 +94,7 @@ public class MainGameManager : MonoBehaviour
 
         while(elapsedTime > gameTime)
         {
-            if (incidentTimer > gameTime - lastIncidentTime)
+            if (incidentTimer < lastIncidentTime)
             {
                 incidentTimer += Time.deltaTime;
             }
@@ -102,7 +102,8 @@ public class MainGameManager : MonoBehaviour
             if(incidentTimer > nextIncidentTime)
             {
                 InvokeIncident(Random.Range(0, rooms.RoomCount));
-                
+                incidentTimer = 0f;
+                nextIncidentTime = Random.Range(randomIncidentInterval.x, randomIncidentInterval.y);
             }
 
             elapsedTime += Time.deltaTime;

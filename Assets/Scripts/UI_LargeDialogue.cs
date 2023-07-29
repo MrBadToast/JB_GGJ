@@ -35,9 +35,15 @@ public class UI_LargeDialogue : MonoBehaviour
 
     private float dialogueTextInterval = 0.05f;
 
-    public IEnumerator Cor_PlayDialogue(LargeDialogueData[] dialogues)
+    private void Start()
     {
         StopAllCoroutines();
+        StartCoroutine(Cor_PlayDialogue(test_dialogues));
+    }
+
+    public IEnumerator Cor_PlayDialogue(LargeDialogueData[] dialogues)
+    {
+        Debug.Log("DDDD");
 
         DialogueGroup.SetActive(true);
 
