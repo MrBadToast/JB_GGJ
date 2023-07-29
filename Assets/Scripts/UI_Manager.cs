@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class UI_Manager : MonoBehaviour
 {
-    private UI_Manager instance;
-    public UI_Manager Instance { get { return instance; } }
+    static private UI_Manager instance;
+    static public UI_Manager Instance { get { return instance; } }
 
     public UI_ItemPanel itemPanel;
     public UI_Clock clock;
     public UI_Alert alert;
     public UI_BottomButtons bottomButtons;
+    public UI_CountDown countDown;
 
     private void Awake()
     {
@@ -18,5 +19,11 @@ public class UI_Manager : MonoBehaviour
         else { Destroy(gameObject); }
     }
 
+    public void StartOpen()
+    {
+        itemPanel.OpenItemSlot();
+        clock.OpenClock();
+        bottomButtons.OpenButtons();
+    }
 
 }

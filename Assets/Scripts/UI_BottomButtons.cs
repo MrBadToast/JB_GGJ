@@ -19,11 +19,11 @@ public class UI_BottomButtons : MonoBehaviour
 
     public void RightRoom()
     {
-
+        MainGameManager.Instance.rooms.SetToNextRoom();
     }
 
     public void LeftRoom()
     {
-
+        MainGameManager.Instance.rooms.SetToPreviousRoom();
     }
 }
