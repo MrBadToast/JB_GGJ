@@ -12,6 +12,7 @@ public class UI_Manager : MonoBehaviour
     public UI_Alert alert;
     public UI_BottomButtons bottomButtons;
     public UI_CountDown countDown;
+    public UI_Score score;
     public UI_LargeDialogue cutscene;
 
     private void Awake()
@@ -25,6 +26,7 @@ public class UI_Manager : MonoBehaviour
         itemPanel.OpenItemSlot();
         clock.OpenClock();
         bottomButtons.OpenButtons();
+        score.OpenScore();
     }
 
 }

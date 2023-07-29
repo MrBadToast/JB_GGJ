@@ -1,6 +1,7 @@
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using System.Timers;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -13,7 +14,8 @@ public class MainGameManager : MonoBehaviour
     [SerializeField] private float fullGameTime = 60f*60f*9f;
     [SerializeField] private float timeSpeedMultiplier = 30f;
     [SerializeField] private int maxScore = 1000;
-    public int score = 0;
+    [SerializeField] private int score = 0;
+    public int Score { get { return score; } }
 
     [Title("RegularIncounter Info")]
     public float regularIncounter = 60f * 30f;
@@ -26,7 +28,7 @@ public class MainGameManager : MonoBehaviour
     private List<Item_Data> inventory = new List<Item_Data>();
     public List<Item_Data> Inventory { get { return inventory; } }
 
-    private const int inventorySize = 5;
+    private const int inventorySize = 3;
 
     public MultipleRoomsManager rooms;
     public DialogueContainer dialogueCont;
@@ -83,6 +85,14 @@ public class MainGameManager : MonoBehaviour
         UI_Manager.Instance.itemPanel.Deselect();
         RemoveItemAt(pickedIndex);
         pickedIndex = -1;
+    }
+
+    public void AddScore(int value)
+    {
+        if (score + value < 0)
+        { score = 0; UI_Manager.Instance.score.SetCurrentScore(score); }
+        else if (score + value > 1000) { score = 1000; UI_Manager.Instance.score.SetCurrentScore(score,true); }
+        else { score += value; UI_Manager.Instance.score.SetCurrentScore(score); }
     }
 
     public void StartMainGameSequence()
