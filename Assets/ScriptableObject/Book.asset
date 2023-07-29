@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Book
   m_EditorClassIdentifier: 
   Item_name: Trash
-  Item_sprite: {fileID: 21300000, guid: ccbebd39133d38e46b8ae4d5dc813d53, type: 3}
+  Item_sprite: {fileID: 21300000, guid: a0263bf328f516747a53b89126a3d589, type: 3}
   Process_Time: 2
   IsFix: 0
   Effect: Clean

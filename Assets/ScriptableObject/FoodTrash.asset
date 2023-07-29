@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FoodTrash
   m_EditorClassIdentifier: 
   Item_name: FoodTrash
-  Item_sprite: {fileID: 21300000, guid: f99292171fde2db48a294f053ee9d001, type: 3}
+  Item_sprite: {fileID: 21300000, guid: f6183355bc8728343bfd08db26dcf9d0, type: 3}
   Process_Time: 2
   IsFix: 0
   Effect: Bubble
