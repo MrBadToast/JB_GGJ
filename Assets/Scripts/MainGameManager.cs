@@ -70,7 +70,7 @@ public class MainGameManager : MonoBehaviour
         Dragable_Object d_obj = Object_Pool.SpawnFromPool<Dragable_Object>("Dragable_Object", Vector3.zero);
         d_obj.transform.SetParent(act_Room.transform);
         d_obj.Set_Obj(item);
-        d_obj.transform.position = act_Room.transform.position;
+        d_obj.transform.position = act_Room.transform.position + Vector3.back;
         UI_Manager.Instance.itemPanel.Deselect();
         RemoveItemAt(pickedIndex);
         pickedIndex = -1;
