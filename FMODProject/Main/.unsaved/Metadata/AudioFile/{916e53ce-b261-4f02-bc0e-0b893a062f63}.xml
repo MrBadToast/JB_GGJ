@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{916e53ce-b261-4f02-bc0e-0b893a062f63}">
+		<property name="assetPath">
+			<value>ExternalAssets/Universal Sound FX/FOLEY/CLEAN/CLEAN_Brush_Asphalt_RR4_mono.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.53204081632653066</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6a6f4e46-113a-4565-81f2-f61ed94c7b35}</destination>
+		</relationship>
+	</object>
+</objects>
