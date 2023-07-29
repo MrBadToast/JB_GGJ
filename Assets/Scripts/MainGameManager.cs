@@ -61,14 +61,27 @@ public class MainGameManager : MonoBehaviour
         return inventory[num];
     }
 
-    public bool RemoveItemAt(int index)
+    int pickedIndex = -1;
+    public bool PickItem(int index)
     {
-        if (inventory.Count < index) return false;
+        if (pickedIndex != -1) return false;
+        if (!TryItem(index)) return false;
+
+        UI_Manager.Instance.itemPanel.SelectSlot(index);
+        pickedIndex = index;
+        return true;
+    }
+
+    public Item_Data DeployItem()
+    {
+        if (pickedIndex == -1) return null;
         else
         {
-            inventory.RemoveAt(index);
-            UI_Manager.Instance.itemPanel.SetSlots(inventory.ToArray());
-            return true;
+            var item = inventory[pickedIndex];
+            UI_Manager.Instance.itemPanel.Deselect();
+            RemoveItemAt(pickedIndex);
+            pickedIndex = -1;
+            return item;
         }
     }
 
@@ -84,6 +97,24 @@ public class MainGameManager : MonoBehaviour
     }
 
     float incidentTimer = 0f;
+
+    private bool TryItem(int index)
+    {
+        if (index > inventorySize) return false;
+        if (inventory[index] == null) return false;
+        return true;
+    }
+
+    private bool RemoveItemAt(int index)
+    {
+        if (inventory.Count < index) return false;
+        else
+        {
+            inventory.RemoveAt(index);
+            UI_Manager.Instance.itemPanel.SetSlots(inventory.ToArray());
+            return true;
+        }
+    }
 
     private IEnumerator Cor_MainGameSequence()
     {
