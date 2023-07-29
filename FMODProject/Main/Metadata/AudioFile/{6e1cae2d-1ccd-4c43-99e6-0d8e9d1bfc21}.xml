@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6e1cae2d-1ccd-4c43-99e6-0d8e9d1bfc21}">
+		<property name="assetPath">
+			<value>ExternalAssets/Universal Sound FX/THUNDER/THUNDER_Clap_Rumble_03_stereo.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>12.174172335600908</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6a6f4e46-113a-4565-81f2-f61ed94c7b35}</destination>
+		</relationship>
+	</object>
+</objects>
