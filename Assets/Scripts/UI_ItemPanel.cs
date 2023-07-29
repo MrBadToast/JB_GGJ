@@ -23,13 +23,8 @@ public class UI_ItemPanel : MonoBehaviour
         Deselect();
         for(int i = 0; i < itemSlots.Length; i++)
         {
-            foreach (GameObject it in itemSlots)
-            {
-                it.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
-            }
-
-            if (i < dataSet.Length) { itemSlots[i].GetComponent<Image>().sprite = dataSet[i].Item_sprite; }
-            else { itemSlots[i].GetComponent<Image>().color = new Color(1, 1, 1, 1); itemSlots[i].GetComponent<Image>().sprite = null; }
+            if (i < dataSet.Length) { itemSlots[i].GetComponent<Image>().color = new Color(1, 1, 1, 1); itemSlots[i].GetComponent<Image>().sprite = dataSet[i].Item_sprite; }
+            else { itemSlots[i].GetComponent<Image>().color = new Color(1, 1, 1, 0); itemSlots[i].GetComponent<Image>().sprite = null; }
         }
     }
 

@@ -27,6 +27,8 @@ public class Clickable_Object : MonoBehaviour, Item
     {
         Click_Controller.instance.Interact(false);
         RuntimeManager.PlayOneShot(data.soundOnInteract);
+        MainGameManager.Instance.AddScore(20);
+        MainGameManager.Instance.AddElapsedTime(MainGameManager.Instance.time_objectInteract);
         Particle_Manager particle = Object_Pool.SpawnFromPool<Particle_Manager>("Particle", this.transform.position);
         particle.Particle_Create(data.Effect, data.Process_Time);
 

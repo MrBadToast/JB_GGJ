@@ -28,11 +28,17 @@ public class Scrubable_Object : MonoBehaviour, Item
         Particle_Manager particle = Object_Pool.SpawnFromPool<Particle_Manager>("Particle", this.transform.position);
         particle.Particle_Create(data.Effect, data.Process_Time);
         srr.DOFade(time, 0.2f).SetEase(Ease.Linear);
-        if (time <= 0) { Off_Scrub(); this.gameObject.SetActive(false); }
+        if (time <= 0) 
+        { 
+            MainGameManager.Instance.AddScore(20);
+            MainGameManager.Instance.AddElapsedTime(MainGameManager.Instance.time_objectInteract); 
+            RuntimeManager.PlayOneShot(data.soundOnInteract); 
+            Off_Scrub();
+            this.gameObject.SetActive(false); 
+        }
     }
     public void Off_Scrub()
     {
-        RuntimeManager.PlayOneShot(data.soundOnInteract);
         Click_Controller.instance.Interact(true);
     }
 }

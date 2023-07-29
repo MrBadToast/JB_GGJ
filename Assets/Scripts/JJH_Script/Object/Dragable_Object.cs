@@ -34,8 +34,11 @@ public class Dragable_Object : MonoBehaviour, Item
     {
         if (!Is_Drag) 
         {
-            this.transform.DOMoveX(-3, 0.5f).OnComplete(()=> this.gameObject.SetActive(false));
-            this.transform.DOMoveY(0, 0.2f).SetLoops(1, LoopType.Yoyo).OnComplete(()=> MainGameManager.Instance.AddItem(data));
+            if(MainGameManager.Instance.Inventory.Count < 3)
+            {
+                this.transform.DOMoveX(-3, 0.5f).OnComplete(() => this.gameObject.SetActive(false));
+                this.transform.DOMoveY(0, 0.2f).SetLoops(1, LoopType.Yoyo).OnComplete(() => MainGameManager.Instance.AddItem(data));
+            }
         }
         GameObject target;
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.forward, 100);
@@ -55,6 +58,8 @@ public class Dragable_Object : MonoBehaviour, Item
     {
         Click_Controller.instance.Interact(false);
         RuntimeManager.PlayOneShot(data.soundOnInteract);
+        MainGameManager.Instance.AddScore(20);
+        MainGameManager.Instance.AddElapsedTime(MainGameManager.Instance.time_objectInteract);
         Particle_Manager particle = Object_Pool.SpawnFromPool<Particle_Manager>("Particle", this.transform.position);
         particle.Particle_Create(data.Effect, data.Process_Time);
         yield return new WaitForSeconds(time);

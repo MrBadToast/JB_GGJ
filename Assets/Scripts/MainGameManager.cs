@@ -18,7 +18,7 @@ public class MainGameManager : MonoBehaviour
     public static MainGameManager Instance { get { return instance; } }
 
     [SerializeField] private float fullGameTime = 60f*60f*9f;
-    [SerializeField] private float timeSpeedMultiplier = 30f;
+    [SerializeField] private float timeSpeedMultiplier = 60f;
     [SerializeField] private int maxScore = 1000;
     [SerializeField] private int goalScore = 700;
     [SerializeField] private int score = 0;
@@ -192,18 +192,38 @@ public class MainGameManager : MonoBehaviour
                         case 0:
                             UI_Manager.Instance.alert.InvokeAlert("지진발생! 집안이 마구 흔들립니다!");
                             RuntimeManager.PlayOneShot(sound_earthquake);
+                            for(int i = 0; i < 3; i++)
+                            {
+                                Room_Data RD = rooms.rooms[Random.Range(0, rooms.rooms.Length)];
+                                foreach (Toggle_Object TO in RD.Toggles.Values) { TO.Change_Toggle(true); }
+                            }
                             break;
                         case 1:
                             UI_Manager.Instance.alert.InvokeAlert("폭우발생! 집에 물난리가 납니다");
                             RuntimeManager.PlayOneShot(sound_storm);
+                            for (int i = 0; i < 2; i++)
+                            {
+                                Room_Data RD = rooms.rooms[Random.Range(0, rooms.rooms.Length)];
+                                foreach (Toggle_Object TO in RD.Toggles.Values) { TO.Change_Toggle(true); }
+                            }
                             break;
                         case 2:
                             UI_Manager.Instance.alert.InvokeAlert("비상! 벌레가 집을 더럽힙니다!");
                             RuntimeManager.PlayOneShot(sound_pest);
+                            for (int i = 0; i < 3; i++)
+                            {
+                                Room_Data RD = rooms.rooms[Random.Range(0, rooms.rooms.Length)];
+                                for (int k = 0; k < 4; k++) { RD.Spawn_Item(); }
+                            }
                             break;
                         case 3:
                             UI_Manager.Instance.alert.InvokeAlert("강아지 탈출! 강아지가 집안을 어지럽힙니다!");
                             RuntimeManager.PlayOneShot(sound_dog);
+                            for (int i = 0; i < 2; i++)
+                            {
+                                Room_Data RD = rooms.rooms[Random.Range(0, rooms.rooms.Length)];
+                                for (int k = 0; k < 3; k++) { RD.Spawn_Item(); }
+                            }
                             break;
                     }
                 }

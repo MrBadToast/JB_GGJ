@@ -37,7 +37,8 @@ public class Room_Data : SerializedMonoBehaviour
     public void Spawn_Item()
     {
         foreach (string Key in Spawn_pos.Keys) { Spawn_pos[Key].enabled = true; }
-        var set_key = keys[Random.Range(0, keys.Count)];
+        string set_key = null;
+        try { set_key = keys[Random.Range(0, keys.Count)]; } catch { return; }
 
         // 스폰 요소 지정
         PolygonCollider2D set_bound = Spawn_pos[set_key];

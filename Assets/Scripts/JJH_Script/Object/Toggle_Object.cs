@@ -17,6 +17,8 @@ public class Toggle_Object : MonoBehaviour
     {
         if((!Toggle && Can_On) || Toggle)
         {
+            if (!Can_On) { MainGameManager.Instance.AddScore(20); }
+            MainGameManager.Instance.AddElapsedTime(MainGameManager.Instance.time_objectInteract);
             Click_Controller.instance.Can_Interact = false;
             Invoke("Can_Interact", 1f);
             Toggle = (Toggle ? false : true);
