@@ -50,20 +50,14 @@ public class Room_Data : SerializedMonoBehaviour
             Vector2[] vPoints = set_bound.GetPath(0);
             for (int i = 0; i < vPoints.Length; ++i)
             {
-                if (b_max_point == Vector2.zero)
-                    b_max_point = vPoints[i];
-                if (b_min_point == Vector2.zero)
-                    b_min_point = vPoints[i];
+                if (b_max_point == Vector2.zero) { b_max_point = vPoints[i]; }
+                if (b_min_point == Vector2.zero) { b_min_point = vPoints[i]; }
 
-                if (vPoints[i].x > b_max_point.x)
-                    b_max_point.x = vPoints[i].x;
-                if (vPoints[i].y > b_max_point.y)
-                    b_max_point.y = vPoints[i].y;
+                if (vPoints[i].x > b_max_point.x) { b_max_point.x = vPoints[i].x; }
+                if (vPoints[i].y > b_max_point.y) { b_max_point.y = vPoints[i].y; }
 
-                if (vPoints[i].x < b_min_point.x)
-                    b_min_point.x = vPoints[i].x;
-                if (vPoints[i].y < b_min_point.y)
-                    b_min_point.y = vPoints[i].y;
+                if (vPoints[i].x < b_min_point.x) { b_min_point.x = vPoints[i].x; }
+                if (vPoints[i].y < b_min_point.y) { b_min_point.y = vPoints[i].y; }
             }
             while (true)
             {
@@ -80,19 +74,22 @@ public class Room_Data : SerializedMonoBehaviour
         switch (set_item.Type)
         {
             case Item_Type.Click:
-                Clickable_Object c_obj = Object_Pool.SpawnFromPool<Clickable_Object>("Clickable_Object", set_pos);
+                Clickable_Object c_obj = Object_Pool.SpawnFromPool<Clickable_Object>("Clickable_Object", Vector3.zero);
                 c_obj.transform.SetParent(this.transform);
                 c_obj.Set_Obj(set_item);
+                c_obj.transform.position = transform.TransformPoint(set_pos);
                 break;
             case Item_Type.Drag:
-                Dragable_Object d_obj = Object_Pool.SpawnFromPool<Dragable_Object>("Dragable_Object", set_pos);
+                Dragable_Object d_obj = Object_Pool.SpawnFromPool<Dragable_Object>("Dragable_Object", Vector3.zero);
                 d_obj.transform.SetParent(this.transform);
                 d_obj.Set_Obj(set_item);
+                d_obj.transform.position = transform.TransformPoint(set_pos);
                 break;
             case Item_Type.Scrub:
-                Scrubable_Object s_obj = Object_Pool.SpawnFromPool<Scrubable_Object>("Scrubable_Object", set_pos);
+                Scrubable_Object s_obj = Object_Pool.SpawnFromPool<Scrubable_Object>("Scrubable_Object", Vector3.zero);
                 s_obj.transform.SetParent(this.transform);
                 s_obj.Set_Obj(set_item);
+                s_obj.transform.position = transform.TransformPoint(set_pos);
                 break;
         }
         foreach (string Key in Spawn_pos.Keys) { Spawn_pos[Key].enabled = false; }

@@ -27,6 +27,9 @@ public class Clickable_Object : MonoBehaviour
         Click_Controller.instance.Interact(false);
         Particle_Manager particle = Object_Pool.SpawnFromPool<Particle_Manager>("Particle", this.transform.position);
         particle.Particle_Create(data.Effect, data.Process_Time);
+
+        //AudioClip_Controller AC = Object_Pool.SpawnFromPool<AudioClip_Controller>("AudioClip_Controller", this.transform.position);
+        //AC.Audio_Play(data.audioClip);
         yield return new WaitForSeconds(time);
         Click_Controller.instance.Interact(true);
         this.gameObject.SetActive(false);
