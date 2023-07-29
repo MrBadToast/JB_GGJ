@@ -24,6 +24,7 @@ public class Particle_Manager : MonoBehaviour
         {
             if(particle[i].gameObject.name == name) { set_particle = particle[i]; break; }
         }
+        if(set_particle == null) { return; }
         set_particle.gameObject.SetActive(true);
         set_particle.Play();
         Invoke("disable", time + 2f);

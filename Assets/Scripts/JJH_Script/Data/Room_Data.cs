@@ -81,14 +81,17 @@ public class Room_Data : SerializedMonoBehaviour
         {
             case Item_Type.Click:
                 Clickable_Object c_obj = Object_Pool.SpawnFromPool<Clickable_Object>("Clickable_Object", set_pos);
+                c_obj.transform.SetParent(this.transform);
                 c_obj.Set_Obj(set_item);
                 break;
             case Item_Type.Drag:
                 Dragable_Object d_obj = Object_Pool.SpawnFromPool<Dragable_Object>("Dragable_Object", set_pos);
+                d_obj.transform.SetParent(this.transform);
                 d_obj.Set_Obj(set_item);
                 break;
             case Item_Type.Scrub:
                 Scrubable_Object s_obj = Object_Pool.SpawnFromPool<Scrubable_Object>("Scrubable_Object", set_pos);
+                s_obj.transform.SetParent(this.transform);
                 s_obj.Set_Obj(set_item);
                 break;
         }
