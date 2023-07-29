@@ -372,68 +372,7 @@ MonoBehaviour:
       Data: 2|LargeDialogueData[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 3|LargeDialogueData, Assembly-CSharp
-    - Name: speecher
-      Entry: 6
-      Data: 
-    - Name: SpeecherColor
-      Entry: 7
-      Data: UnityEngine.Color, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
       Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: context
-      Entry: 6
-      Data: 
-    - Name: fullImage
-      Entry: 6
-      Data: 
-    - Name: actions
-      Entry: 7
-      Data: 4|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
-    - Name: m_PersistentCalls
-      Entry: 7
-      Data: 5|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
-    - Name: m_Calls
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
-        UnityEngine.CoreModule]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: disableCrossfade
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -451,7 +390,7 @@ MonoBehaviour:
       Data: GoodEnd
     - Name: $v
       Entry: 7
-      Data: 7|LargeDialogueData[], Assembly-CSharp
+      Data: 3|LargeDialogueData[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 0
@@ -472,7 +411,7 @@ MonoBehaviour:
       Data: BadEnd
     - Name: $v
       Entry: 7
-      Data: 8|LargeDialogueData[], Assembly-CSharp
+      Data: 4|LargeDialogueData[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 0
@@ -614,6 +553,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cb088e88f81fb44ae7cfabec73135c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  Dragging: 0
   Can_Interact: 1
 --- !u!4 &1741686751
 Transform:

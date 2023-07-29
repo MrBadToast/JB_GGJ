@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using FMODUnity;
 
 public enum Item_Type
 {
@@ -35,7 +36,7 @@ public class Item_Data : ScriptableObject
     public float Process_Time;
     public bool IsFix;
     public string Effect;
-    public AudioClip audioClip;
+    public EventReference soundOnInteract;
     public string Interact_Obj;
     public Item_Type Type;
 }
