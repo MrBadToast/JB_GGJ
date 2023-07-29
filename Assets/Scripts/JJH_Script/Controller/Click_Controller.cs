@@ -11,7 +11,15 @@ public class Click_Controller : MonoBehaviour
     public bool Can_Interact;
     public void Awake()
     {
-        instance = this;
+        if (null == instance)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
     public void Update()
     {
@@ -26,11 +34,12 @@ public class Click_Controller : MonoBehaviour
                 hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.forward, 100);
                 if (hit)
                 {
+                    Debug.Log(hit.transform.gameObject);
                     Click_Pos = hit.transform.position;
                     target = hit.transform.gameObject;
                     target.GetComponent<Clickable_Object>()?.On_Click();
                     target.GetComponent<Dragable_Object>()?.On_Click();
-
+                    target.GetComponent<Toggle_Object>()?.On_Click();
                 }
                 else { target = null; }
             }
