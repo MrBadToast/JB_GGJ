@@ -30,7 +30,7 @@ public class Dragable_Object : MonoBehaviour
     public void Set_Pos(Vector2 pos) { this.transform.position = pos; }
     public GameObject Off_Drag() 
     {
-        if (!Is_Drag) { Debug.Log("인벤토리 넣기"); }
+        if (!Is_Drag) { MainGameManager.Instance.AddItem(data); this.gameObject.SetActive(false); }
         GameObject target;
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.forward, 100);
         if (hit)

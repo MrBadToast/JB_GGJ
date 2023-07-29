@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8418188500481150383}
   - component: {fileID: 7572151559404113067}
   - component: {fileID: 2611758521035741336}
-  - component: {fileID: 174833315671063950}
+  - component: {fileID: 3031020120297122680}
   m_Layer: 6
   m_Name: Dragable_Obj
   m_TagString: Untagged
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 631438f8cbef63749b833189365c705e, type: 2}
---- !u!114 &174833315671063950
+--- !u!114 &3031020120297122680
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

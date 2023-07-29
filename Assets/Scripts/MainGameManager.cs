@@ -56,33 +56,24 @@ public class MainGameManager : MonoBehaviour
         }
     }
 
-    public Item_Data GetItem(int num)
-    {
-        return inventory[num];
-    }
-
     int pickedIndex = -1;
-    public Item_Data PickItem(int index)
+    public void PickItem(int index)
     {
-        if (pickedIndex != -1) return null;
-        if (!TryItem(index)) return null;
+        if (pickedIndex != -1) return;
+        if (!TryItem(index)) return;
 
         UI_Manager.Instance.itemPanel.SelectSlot(index);
         pickedIndex = index;
-        return inventory[index];
-    }
-
-    public Item_Data DeployItem()
-    {
-        if (pickedIndex == -1) return null;
-        else
-        {
-            var item = inventory[pickedIndex];
-            UI_Manager.Instance.itemPanel.Deselect();
-            RemoveItemAt(pickedIndex);
-            pickedIndex = -1;
-            return item;
-        }
+        var item = inventory[pickedIndex];
+        GameObject act_Room = null;
+        foreach (Room_Data room in rooms.rooms) { if (room.gameObject.activeSelf) { act_Room = room.gameObject; break; } }
+        Dragable_Object d_obj = Object_Pool.SpawnFromPool<Dragable_Object>("Dragable_Object", Vector3.zero);
+        d_obj.transform.SetParent(act_Room.transform);
+        d_obj.Set_Obj(item);
+        d_obj.transform.position = act_Room.transform.position;
+        UI_Manager.Instance.itemPanel.Deselect();
+        RemoveItemAt(pickedIndex);
+        pickedIndex = -1;
     }
 
     public void StartMainGameSequence()
@@ -101,6 +92,7 @@ public class MainGameManager : MonoBehaviour
     private bool TryItem(int index)
     {
         if (index > inventorySize) return false;
+        if (index >= inventory.Count) return false;
         if (inventory[index] == null) return false;
         return true;
     }
