@@ -1,3 +1,4 @@
+using FMODUnity;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,6 +17,11 @@ public class MainGameManager : MonoBehaviour
     [SerializeField] private int maxScore = 1000;
     [SerializeField] private int score = 0;
     public int Score { get { return score; } }
+
+    public EventReference sound_earthquake;
+    public EventReference sound_storm;
+    public EventReference sound_pest;
+    public EventReference sound_dog;
 
     [Title("RegularIncounter Info")]
     public float regularIncounter = 60f * 30f;
@@ -95,6 +101,11 @@ public class MainGameManager : MonoBehaviour
         else { score += value; UI_Manager.Instance.score.SetCurrentScore(score); }
     }
 
+    public void AddElapsedTime(float value)
+    {
+        elapsedTime += value;
+    }
+
     public void StartMainGameSequence()
     {
         if (sequenceRunning) return;
@@ -149,15 +160,19 @@ public class MainGameManager : MonoBehaviour
                     {
                         case 0:
                             UI_Manager.Instance.alert.InvokeAlert("지진 발생! 집안이 마구 흔들립니다!");
+                            RuntimeManager.PlayOneShot(sound_earthquake);
                             break;
                         case 1:
                             UI_Manager.Instance.alert.InvokeAlert("폭우 발생! 집에 물난리가 납니다!");
+                            RuntimeManager.PlayOneShot(sound_storm);
                             break;
                         case 2:
                             UI_Manager.Instance.alert.InvokeAlert("비상! 벌레가 집을 더럽힙니다!");
+                            RuntimeManager.PlayOneShot(sound_pest);
                             break;
                         case 3:
                             UI_Manager.Instance.alert.InvokeAlert("강아지 탈출! 강아지가 집을 어지럽힙니다!");
+                            RuntimeManager.PlayOneShot(sound_dog);
                             break;
                     }
                 }
