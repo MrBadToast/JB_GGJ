@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class Scrubable_Object : MonoBehaviour
+public class Scrubable_Object : MonoBehaviour, Item
 {
     Item_Data data;
     SpriteRenderer srr;

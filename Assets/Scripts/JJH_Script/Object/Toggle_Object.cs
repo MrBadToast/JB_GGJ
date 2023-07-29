@@ -20,8 +20,7 @@ public class Toggle_Object : MonoBehaviour
             Click_Controller.instance.Can_Interact = false;
             Invoke("Can_Interact", 1f);
             Toggle = (Toggle ? false : true);
-            if (Toggle) { OFF.DOFade(0, 0.6f).SetEase(Ease.Linear); ON.DOFade(1, 1f).SetEase(Ease.Linear); }
-            else { OFF.DOFade(1, 0.6f).SetEase(Ease.Linear); ON.DOFade(0, 1f).SetEase(Ease.Linear); }
+            set_Toggle();
         }
     }
 
@@ -30,7 +29,20 @@ public class Toggle_Object : MonoBehaviour
     public void Change_Toggle(bool _Toggle)
     {
         Toggle = _Toggle;
-        if (Toggle) { OFF.DOFade(0, 0.6f).SetEase(Ease.Linear); ON.DOFade(1, 1f).SetEase(Ease.Linear); }
-        else { OFF.DOFade(1, 0.6f).SetEase(Ease.Linear); ON.DOFade(0, 1f).SetEase(Ease.Linear); }
+        set_Toggle();
+    }
+
+    void set_Toggle()
+    {
+        if (Toggle) { 
+            OFF.DOFade(0, 0.6f).SetEase(Ease.Linear).OnComplete(() => OFF.gameObject.SetActive(false));
+            ON.gameObject.SetActive(true);
+            ON.DOFade(1, 1f).SetEase(Ease.Linear); 
+        }
+        else {
+            OFF.gameObject.SetActive(true);
+            OFF.DOFade(1, 0.6f).SetEase(Ease.Linear);
+            ON.DOFade(0, 1f).SetEase(Ease.Linear).OnComplete(() => ON.gameObject.SetActive(false)); 
+        }
     }
 }

@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Clickable_Object : MonoBehaviour
+public interface Item { }
+public class Clickable_Object : MonoBehaviour, Item
 {
     Item_Data data;
     SpriteRenderer srr;
