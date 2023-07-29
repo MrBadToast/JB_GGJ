@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{e1c0b312-d431-4f76-8eb3-cf7a29b464cb}">
+		<property name="name">
+			<value>Faucet</value>
+		</property>
+		<relationship name="folder">
+			<destination>{9b2e5e21-2937-4df7-bffc-33e29a14f61f}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d113c0f3-f367-4c75-801f-7707e42b6dee}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d113c0f3-f367-4c75-801f-7707e42b6dee}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
