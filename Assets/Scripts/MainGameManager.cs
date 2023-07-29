@@ -62,14 +62,14 @@ public class MainGameManager : MonoBehaviour
     }
 
     int pickedIndex = -1;
-    public bool PickItem(int index)
+    public Item_Data PickItem(int index)
     {
-        if (pickedIndex != -1) return false;
-        if (!TryItem(index)) return false;
+        if (pickedIndex != -1) return null;
+        if (!TryItem(index)) return null;
 
         UI_Manager.Instance.itemPanel.SelectSlot(index);
         pickedIndex = index;
-        return true;
+        return inventory[index];
     }
 
     public Item_Data DeployItem()
@@ -105,7 +105,7 @@ public class MainGameManager : MonoBehaviour
         return true;
     }
 
-    private bool RemoveItemAt(int index)
+    public bool RemoveItemAt(int index)
     {
         if (inventory.Count < index) return false;
         else
