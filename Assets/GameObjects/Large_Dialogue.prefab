@@ -895,31 +895,7 @@ MonoBehaviour:
   fullImageUI_B: {fileID: 8527781083109067912}
   DialogueGroup: {fileID: 7123860384194457940}
   triangle: {fileID: 7123860384331669562}
-  test_dialogues:
-  - speecher: Speecher
-    SpeecherColor: {r: 0, g: 0, b: 0, a: 0}
-    context: Test1
-    fullImage: {fileID: 0}
-    actions:
-      m_PersistentCalls:
-        m_Calls: []
-    disableCrossfade: 0
-  - speecher: Speecher
-    SpeecherColor: {r: 0, g: 0, b: 0, a: 0}
-    context: Test2
-    fullImage: {fileID: 0}
-    actions:
-      m_PersistentCalls:
-        m_Calls: []
-    disableCrossfade: 0
-  - speecher: Speecher
-    SpeecherColor: {r: 0, g: 0, b: 0, a: 0}
-    context: Test3
-    fullImage: {fileID: 0}
-    actions:
-      m_PersistentCalls:
-        m_Calls: []
-    disableCrossfade: 0
+  test_dialogues: []
 --- !u!1 &7123860385680851585
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,8 +963,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d0c05aeac59b3354492b935af073f30a, type: 2}
+  m_sharedMaterial: {fileID: 4498395766796495062, guid: d0c05aeac59b3354492b935af073f30a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1123,8 +1099,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e892a55a013575441a9370e0f43ce6c8, type: 2}
+  m_sharedMaterial: {fileID: 8038886384267314793, guid: e892a55a013575441a9370e0f43ce6c8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

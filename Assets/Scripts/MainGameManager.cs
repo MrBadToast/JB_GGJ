@@ -23,6 +23,7 @@ public class MainGameManager : MonoBehaviour
     public EventReference sound_pest;
     public EventReference sound_dog;
 
+    public float scoreDiminishTime = 60f * 60f;
     [Title("RegularIncounter Info")]
     public float regularIncounter = 60f * 30f;
     public float incounterRate = 0.66f;
@@ -44,6 +45,7 @@ public class MainGameManager : MonoBehaviour
     public float ElapsedTime01 { get { return Mathf.Clamp01(elapsedTime / fullGameTime); } }
 
     bool sequenceRunning = false;
+    private StudioEventEmitter sound_ClockTicking;
 
     private void Awake()
     {
@@ -52,6 +54,8 @@ public class MainGameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        sound_ClockTicking = GetComponent<StudioEventEmitter>();
     }
 
     private void Start()
@@ -147,10 +151,23 @@ public class MainGameManager : MonoBehaviour
         UI_Manager.Instance.StartOpen();
 
         float regularIncounterTimer = 0f;
+        float scoreDiminishTimer = 0f;
+
+        sound_ClockTicking.Play();
+
 
         while (elapsedTime < fullGameTime)
         {
+
+            sound_ClockTicking.EventInstance.setParameterByName("Volume", Mathf.InverseLerp(0f, scoreDiminishTime, scoreDiminishTimer));
             //regular incounter
+            if(scoreDiminishTime < scoreDiminishTimer)
+            {
+                
+
+                scoreDiminishTimer = 0f;
+            }
+
             if (regularIncounter < regularIncounterTimer)
             {
                 if (Random.Range(0f, 1f) < incounterRate)
@@ -178,17 +195,20 @@ public class MainGameManager : MonoBehaviour
                 }
 
                 regularIncounterTimer = 0f;
-                score = Mathf.Clamp(score, 0, maxScore);
-
             }
+
+            score = Mathf.Clamp(score, 0, maxScore);
+
 
             UI_Manager.Instance.clock.SetClock(ElapsedTime01);
             regularIncounterTimer += Time.deltaTime * timeSpeedMultiplier;
+            scoreDiminishTimer += Time.deltaTime * timeSpeedMultiplier;
             elapsedTime += Time.deltaTime * timeSpeedMultiplier;
             yield return null;
 
         }
 
+        sound_ClockTicking.Stop();
 
     }
 }
