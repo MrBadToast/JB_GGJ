@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5976927509450377927}
   - component: {fileID: 3779931283649302570}
+  - component: {fileID: 90760624307739370}
   m_Layer: 0
   m_Name: MainGameCycle
   m_TagString: Untagged
@@ -44,9 +45,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23081d7b5dec4de4fa38a27a8e7c567f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTime: 60
+  fullGameTime: 32400
+  timeSpeedMultiplier: 90
+  maxScore: 1000
   score: 0
-  randomIncidentInterval: {x: 2.0813303, y: 3.9463568}
-  lastIncidentTime: 50
+  sound_earthquake:
+    Guid:
+      Data1: 1538123436
+      Data2: 1139339376
+      Data3: 1855978919
+      Data4: -1732982636
+    Path: event:/Situation/Earth Quake
+  sound_storm:
+    Guid:
+      Data1: 688108584
+      Data2: 1124768227
+      Data3: -2477904
+      Data4: -988124688
+    Path: event:/Situation/Heavy rain
+  sound_pest:
+    Guid:
+      Data1: 1263463449
+      Data2: 1118742889
+      Data3: -928680826
+      Data4: 595960667
+    Path: event:/Situation/Pest
+  sound_dog:
+    Guid:
+      Data1: 406845776
+      Data2: 1220879550
+      Data3: 596539782
+      Data4: -1711419281
+    Path: event:/Situation/Dog
+  scoreDiminishTime: 3600
+  regularIncounter: 1800
+  incounterRate: 0.66
+  time_roomMove: 30
+  time_objectInteract: 40
   rooms: {fileID: 0}
   dialogueCont: {fileID: 0}
+--- !u!114 &90760624307739370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7815089387267798487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1588302925
+      Data2: 1229850868
+      Data3: 959532705
+      Data4: 104373319
+    Path: event:/Timer
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params:
+  - Name: Volume
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

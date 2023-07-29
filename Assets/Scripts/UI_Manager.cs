@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UI_Manager : MonoBehaviour
@@ -13,6 +14,7 @@ public class UI_Manager : MonoBehaviour
     public UI_BottomButtons bottomButtons;
     public UI_CountDown countDown;
     public UI_Score score;
+    public TextMeshProUGUI incompleteCount;
     public UI_LargeDialogue cutscene;
 
     private void Awake()
@@ -27,6 +29,7 @@ public class UI_Manager : MonoBehaviour
         clock.OpenClock();
         bottomButtons.OpenButtons();
         score.OpenScore();
+        incompleteCount.gameObject.SetActive(true);
     }
 
 }

@@ -1,4 +1,8 @@
 using FMODUnity;
+
+using FMODUnity;
+using DG.Tweening;
+
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,6 +20,7 @@ public class MainGameManager : MonoBehaviour
     [SerializeField] private float fullGameTime = 60f*60f*9f;
     [SerializeField] private float timeSpeedMultiplier = 30f;
     [SerializeField] private int maxScore = 1000;
+    [SerializeField] private int goalScore = 700;
     [SerializeField] private int score = 0;
     public int Score { get { return score; } }
 
@@ -24,6 +29,7 @@ public class MainGameManager : MonoBehaviour
     public EventReference sound_pest;
     public EventReference sound_dog;
 
+    public float scoreDiminishTime = 60f * 60f;
     [Title("RegularIncounter Info")]
     public float regularIncounter = 60f * 30f;
     public float incounterRate = 0.66f;
@@ -39,12 +45,14 @@ public class MainGameManager : MonoBehaviour
 
     public MultipleRoomsManager rooms;
     public DialogueContainer dialogueCont;
+    public GameObject gameoverObject;
 
     private float elapsedTime = 0;
     public float ElapsedTime { get { return elapsedTime; } }
     public float ElapsedTime01 { get { return Mathf.Clamp01(elapsedTime / fullGameTime); } }
 
     bool sequenceRunning = false;
+    private StudioEventEmitter sound_ClockTicking;
 
     private void Awake()
     {
@@ -53,6 +61,8 @@ public class MainGameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        sound_ClockTicking = GetComponent<StudioEventEmitter>();
     }
 
     private void Start()
@@ -148,49 +158,80 @@ public class MainGameManager : MonoBehaviour
 
         UI_Manager.Instance.StartOpen();
 
+        UI_Manager.Instance.score.SetCurrentScore(0);
+        UI_Manager.Instance.score.SetGoalScore(goalScore);
+
         float regularIncounterTimer = 0f;
+        float scoreDiminishTimer = 0f;
+
+        sound_ClockTicking.Play();
+
 
         while (elapsedTime < fullGameTime)
         {
+            sound_ClockTicking.EventInstance.setParameterByName("Volume", Mathf.InverseLerp(0f, scoreDiminishTime, scoreDiminishTimer));
             //regular incounter
+            if(scoreDiminishTime < scoreDiminishTimer)
+            {
+                int incompletedCount = rooms.Check_Room_Data();
+
+                if (incompletedCount < 5) incompletedCount = 0;
+
+                AddScore(-incompletedCount * 5);
+
+                scoreDiminishTimer = 0f;
+            }
+
             if (regularIncounter < regularIncounterTimer)
             {
                 if (Random.Range(0f, 1f) < incounterRate)
                 {
-                    int task = Random.Range(0, 3);
+                    int task = Random.Range(0, 4);
                     switch (task)
                     {
                         case 0:
-                            UI_Manager.Instance.alert.InvokeAlert("ÁöÁø ¹ß»ý! Áý¾ÈÀÌ ¸¶±¸ Èçµé¸³´Ï´Ù!");
+                            UI_Manager.Instance.alert.InvokeAlert("ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½! ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½é¸³ï¿½Ï´ï¿½!");
                             RuntimeManager.PlayOneShot(sound_earthquake);
                             break;
                         case 1:
-                            UI_Manager.Instance.alert.InvokeAlert("Æø¿ì ¹ß»ý! Áý¿¡ ¹°³­¸®°¡ ³³´Ï´Ù!");
+                            UI_Manager.Instance.alert.InvokeAlert("ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½! ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½!");
                             RuntimeManager.PlayOneShot(sound_storm);
                             break;
                         case 2:
-                            UI_Manager.Instance.alert.InvokeAlert("ºñ»ó! ¹ú·¹°¡ ÁýÀ» ´õ·´Èü´Ï´Ù!");
+                            UI_Manager.Instance.alert.InvokeAlert("ï¿½ï¿½ï¿½! ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½!");
                             RuntimeManager.PlayOneShot(sound_pest);
                             break;
                         case 3:
-                            UI_Manager.Instance.alert.InvokeAlert("°­¾ÆÁö Å»Ãâ! °­¾ÆÁö°¡ ÁýÀ» ¾îÁö·´Èü´Ï´Ù!");
+                            UI_Manager.Instance.alert.InvokeAlert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å»ï¿½ï¿½! ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½!");
                             RuntimeManager.PlayOneShot(sound_dog);
                             break;
                     }
                 }
 
                 regularIncounterTimer = 0f;
-                score = Mathf.Clamp(score, 0, maxScore);
-
             }
+
+            score = Mathf.Clamp(score, 0, maxScore);
+
+            UI_Manager.Instance.incompleteCount.text = "! : " + rooms.Check_Room_Data().ToString();
 
             UI_Manager.Instance.clock.SetClock(ElapsedTime01);
             regularIncounterTimer += Time.deltaTime * timeSpeedMultiplier;
+            scoreDiminishTimer += Time.deltaTime * timeSpeedMultiplier;
             elapsedTime += Time.deltaTime * timeSpeedMultiplier;
             yield return null;
 
         }
 
+        sound_ClockTicking.Stop();
+
+        if (score < goalScore)
+        { gameoverObject.SetActive(true); }
+        else
+        {
+            LoadingSceneController.Instance.LoadScene("Ending");
+
+        }
 
     }
 }

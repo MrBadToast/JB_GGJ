@@ -1000,6 +1000,7 @@ GameObject:
   - component: {fileID: 1538851436247935932}
   - component: {fileID: 3441983397795175044}
   - component: {fileID: 6093669302944646648}
+  - component: {fileID: 5990645391771454097}
   m_Layer: 5
   m_Name: LoadingScreen
   m_TagString: Untagged
@@ -1106,3 +1107,15 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 55
+--- !u!225 &5990645391771454097
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8683517893223259654}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
