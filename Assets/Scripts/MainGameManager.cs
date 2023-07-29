@@ -150,7 +150,7 @@ public class MainGameManager : MonoBehaviour
 
     private IEnumerator Cor_MainGameSequence()
     {
-        //yield return dialogueCont.StartCoroutine(dialogueCont.StartLargeDialogue("IntroCutscene"));
+        yield return dialogueCont.StartCoroutine(dialogueCont.StartLargeDialogue("IntroCutscene"));
 
         yield return new WaitForSeconds(2f);
 
