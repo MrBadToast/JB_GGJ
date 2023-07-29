@@ -31,7 +31,7 @@ public class Room_Data : SerializedMonoBehaviour
     }
 
     [Button("Spawn_Item")]
-    void Spawn_Item()
+    public void Spawn_Item()
     {
         foreach (string Key in Spawn_pos.Keys) { Spawn_pos[Key].enabled = true; }
         var set_key = keys[Random.Range(0, keys.Count)];

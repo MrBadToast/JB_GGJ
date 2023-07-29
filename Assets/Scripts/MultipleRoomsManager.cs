@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class MultipleRoomsManager : MonoBehaviour
 {
-    [SerializeField] private SingleRoomBehavior[] rooms;
-    [SerializeField] public int RoomCount { get { return rooms.Length; } }
+    [SerializeField] private Room_Data[] rooms;
+    public int RoomCount { get { return rooms.Length; } }
 
-    [SerializeField,ReadOnly]private int currentRoomIndex = 0;
+    [SerializeField,ReadOnly] private int currentRoomIndex = 0;
     public int CurrentRoomIndex { get { return currentRoomIndex; } }
+
+    public void SpawnIncident(int index)
+    {
+        rooms[index].Spawn_Item();
+    }
 
     public void SetToNextRoom()
     {
