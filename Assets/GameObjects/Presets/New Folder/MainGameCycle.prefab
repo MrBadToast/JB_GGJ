@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullGameTime: 32400
-  timeSpeedMultiplier: 30
+  timeSpeedMultiplier: 90
   maxScore: 1000
   score: 0
   sound_earthquake:
@@ -77,6 +77,7 @@ MonoBehaviour:
       Data3: 596539782
       Data4: -1711419281
     Path: event:/Situation/Dog
+  scoreDiminishTime: 3600
   regularIncounter: 1800
   incounterRate: 0.66
   time_roomMove: 30

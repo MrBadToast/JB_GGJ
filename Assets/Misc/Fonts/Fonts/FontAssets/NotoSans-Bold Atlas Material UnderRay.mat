@@ -29,5 +29,6 @@ Material:
     - _ScaleRatioC: 0.365625
     - _UnderlayDilate: 1
     - _UnderlaySoftness: 1
-    m_Colors: []
+    m_Colors:
+    - _OutlineColor: {r: 0.13286836, g: 0.033104774, b: 0.033104774, a: 1}
   m_BuildTextureStacks: []

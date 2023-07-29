@@ -1,8 +1,7 @@
-<<<<<<< HEAD
+
 using FMODUnity;
-=======
 using DG.Tweening;
->>>>>>> origin/JJH_Branch
+
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,6 +18,7 @@ public class MainGameManager : MonoBehaviour
     [SerializeField] private float fullGameTime = 60f*60f*9f;
     [SerializeField] private float timeSpeedMultiplier = 30f;
     [SerializeField] private int maxScore = 1000;
+    [SerializeField] private int goalScore = 700;
     [SerializeField] private int score = 0;
     public int Score { get { return score; } }
 
@@ -43,6 +43,7 @@ public class MainGameManager : MonoBehaviour
 
     public MultipleRoomsManager rooms;
     public DialogueContainer dialogueCont;
+    public GameObject gameoverObject;
 
     private float elapsedTime = 0;
     public float ElapsedTime { get { return elapsedTime; } }
@@ -155,6 +156,9 @@ public class MainGameManager : MonoBehaviour
 
         UI_Manager.Instance.StartOpen();
 
+        UI_Manager.Instance.score.SetCurrentScore(0);
+        UI_Manager.Instance.score.SetGoalScore(goalScore);
+
         float regularIncounterTimer = 0f;
         float scoreDiminishTimer = 0f;
 
@@ -163,12 +167,15 @@ public class MainGameManager : MonoBehaviour
 
         while (elapsedTime < fullGameTime)
         {
-
             sound_ClockTicking.EventInstance.setParameterByName("Volume", Mathf.InverseLerp(0f, scoreDiminishTime, scoreDiminishTimer));
             //regular incounter
             if(scoreDiminishTime < scoreDiminishTimer)
             {
-                
+                int incompletedCount = rooms.Check_Room_Data();
+
+                if (incompletedCount < 5) incompletedCount = 0;
+
+                AddScore(-incompletedCount * 5);
 
                 scoreDiminishTimer = 0f;
             }
@@ -177,7 +184,7 @@ public class MainGameManager : MonoBehaviour
             {
                 if (Random.Range(0f, 1f) < incounterRate)
                 {
-                    int task = Random.Range(0, 3);
+                    int task = Random.Range(0, 4);
                     switch (task)
                     {
                         case 0:
@@ -204,6 +211,7 @@ public class MainGameManager : MonoBehaviour
 
             score = Mathf.Clamp(score, 0, maxScore);
 
+            UI_Manager.Instance.incompleteCount.text = "! : " + rooms.Check_Room_Data().ToString();
 
             UI_Manager.Instance.clock.SetClock(ElapsedTime01);
             regularIncounterTimer += Time.deltaTime * timeSpeedMultiplier;
@@ -214,6 +222,14 @@ public class MainGameManager : MonoBehaviour
         }
 
         sound_ClockTicking.Stop();
+
+        if (score < goalScore)
+        { gameoverObject.SetActive(true); }
+        else
+        {
+            LoadingSceneController.Instance.LoadScene("Ending");
+
+        }
 
     }
 }
