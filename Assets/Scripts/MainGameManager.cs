@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
@@ -78,10 +79,11 @@ public class MainGameManager : MonoBehaviour
         var item = inventory[pickedIndex];
         GameObject act_Room = null;
         foreach (Room_Data room in rooms.rooms) { if (room.gameObject.activeSelf) { act_Room = room.gameObject; break; } }
-        Dragable_Object d_obj = Object_Pool.SpawnFromPool<Dragable_Object>("Dragable_Object", Vector3.zero);
+        Dragable_Object d_obj = Object_Pool.SpawnFromPool<Dragable_Object>("Dragable_Object", Camera.main.ScreenToWorldPoint(Input.mousePosition) + (Vector3.forward * 9));
         d_obj.transform.SetParent(act_Room.transform);
         d_obj.Set_Obj(item);
-        d_obj.transform.position = act_Room.transform.position + Vector3.back;
+        d_obj.transform.DOMoveX(Random.Range(-0.1f, 0.1f), 0.5f);
+        d_obj.transform.DOMoveY(Random.Range(-0.1f, 0.1f), 0.2f).SetLoops(1, LoopType.Yoyo);
         UI_Manager.Instance.itemPanel.Deselect();
         RemoveItemAt(pickedIndex);
         pickedIndex = -1;
