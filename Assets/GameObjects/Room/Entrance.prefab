@@ -235,7 +235,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1257132607929961142}
+  m_Father: {fileID: 3846442865176557022}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8250602819515284273
 SpriteRenderer:
@@ -408,7 +408,7 @@ Transform:
   - {fileID: 6628292112880899649}
   - {fileID: 4054838455518615110}
   - {fileID: 1164282235557106345}
-  - {fileID: 1257132607929961142}
+  - {fileID: 3846442865176557022}
   - {fileID: 6486907438891117836}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -556,7 +556,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 631438f8cbef63749b833189365c705e, type: 2}
     - {fileID: 11400000, guid: 7c2a30ee4e8a5ae40afbf46edbfcedc0, type: 2}
     - {fileID: 11400000, guid: fb92b6d06b5b3e94990cebd1137946b4, type: 2}
-    - {fileID: 4980744144081158731}
+    - {fileID: 6993065968805510435}
     - {fileID: 1038938333433619953}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -808,7 +808,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1257132607929961142}
+  m_Father: {fileID: 3846442865176557022}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4454510335117695497
 SpriteRenderer:
@@ -1372,7 +1372,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 371793618304413498, guid: e13d6410ef1be3741a86b4deb6c76f4a, type: 3}
       propertyPath: m_Name
-      value: Toggle_Obj
+      value: Shelf
       objectReference: {fileID: 0}
     - target: {fileID: 371793618304413498, guid: e13d6410ef1be3741a86b4deb6c76f4a, type: 3}
       propertyPath: m_IsActive
@@ -1501,12 +1501,12 @@ PrefabInstance:
       addedObject: {fileID: 1299477315412144817}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e13d6410ef1be3741a86b4deb6c76f4a, type: 3}
---- !u!4 &1257132607929961142 stripped
+--- !u!4 &3846442865176557022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2058883817748843817, guid: e13d6410ef1be3741a86b4deb6c76f4a, type: 3}
   m_PrefabInstance: {fileID: 3022989042080250103}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4980744144081158731 stripped
+--- !u!114 &6993065968805510435 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5260077881413928404, guid: e13d6410ef1be3741a86b4deb6c76f4a, type: 3}
   m_PrefabInstance: {fileID: 3022989042080250103}
