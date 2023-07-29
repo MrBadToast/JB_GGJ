@@ -199,6 +199,10 @@ PrefabInstance:
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[6]
       value: 
       objectReference: {fileID: 2042886762}
+    - target: {fileID: 5104553323179583062, guid: 86a133d1dc857854aa285b7bed4c2b10, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5969253172576908041, guid: 86a133d1dc857854aa285b7bed4c2b10, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.34
@@ -511,6 +515,10 @@ PrefabInstance:
     - target: {fileID: 6261639564749556773, guid: cd682f2497fb6ee48b32a967f54e9383, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810638514538487617, guid: cd682f2497fb6ee48b32a967f54e9383, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -873,6 +881,10 @@ PrefabInstance:
     - target: {fileID: 6788515340136004318, guid: e78520cdf92b49c429c829774a460d89, type: 3}
       propertyPath: m_Name
       value: Entrance
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788515340136004318, guid: e78520cdf92b49c429c829774a460d89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1319,6 +1331,10 @@ PrefabInstance:
     - target: {fileID: 6114460140641953609, guid: 7e8285efe1b632844baf4b5413f30412, type: 3}
       propertyPath: m_Name
       value: Living_Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 6114460140641953609, guid: 7e8285efe1b632844baf4b5413f30412, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7450710790474315296, guid: 7e8285efe1b632844baf4b5413f30412, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1836,6 +1852,10 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[17].y
       value: 0.68
       objectReference: {fileID: 0}
+    - target: {fileID: 8820928359559316548, guid: cfe2415593399524a813dcd7ef27b45d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2049,6 +2069,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 303476445906251644, guid: e9d7f4139a064e249b784494cc3aaa36, type: 3}
+      propertyPath: autoGenerate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4524172669430546031, guid: e9d7f4139a064e249b784494cc3aaa36, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2834,6 +2858,10 @@ PrefabInstance:
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[6]
       value: 
       objectReference: {fileID: 439778651}
+    - target: {fileID: 7993186494034606039, guid: b97e7410cc4abf2478c811853f271725, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8908120811863550030, guid: b97e7410cc4abf2478c811853f271725, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3038,6 +3066,14 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6991765166612294685}
+    - target: {fileID: 4478889543758168471, guid: bc845cf28e6545641b6bf060ba329330, type: 3}
+      propertyPath: endValueV3.x
+      value: -400
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478889543758168471, guid: bc845cf28e6545641b6bf060ba329330, type: 3}
+      propertyPath: endValueV3.y
+      value: -130
+      objectReference: {fileID: 0}
     - target: {fileID: 4718412203298081670, guid: bc845cf28e6545641b6bf060ba329330, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3442,7 +3478,7 @@ PrefabInstance:
       objectReference: {fileID: 1708877407}
     - target: {fileID: 3779931283649302570, guid: 61d828b2603d96d409794d3d9fc89566, type: 3}
       propertyPath: timeSpeedMultiplier
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 5976927509450377927, guid: 61d828b2603d96d409794d3d9fc89566, type: 3}
       propertyPath: m_LocalPosition.x
