@@ -12,6 +12,8 @@ public class MultipleRoomsManager : MonoBehaviour
 
     public void SetToNextRoom()
     {
+        if (!Click_Controller.instance.Can_Interact) return;
+
         rooms[currentRoomIndex].gameObject.SetActive(false);
         if (currentRoomIndex == rooms.Length-1)
         {
@@ -25,6 +27,8 @@ public class MultipleRoomsManager : MonoBehaviour
 
     public void SetToPreviousRoom()
     {
+        if (!Click_Controller.instance.Can_Interact) return;
+
         rooms[currentRoomIndex].gameObject.SetActive(false);
         if (currentRoomIndex == 0)
         {
