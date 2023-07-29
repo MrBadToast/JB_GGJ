@@ -8,7 +8,7 @@ public class MainGameManager : MonoBehaviour
     public static MainGameManager Instance { get { return instance; } }
 
     [SerializeField] private float gameTime = 60f;
-     public int score = 0;
+    public int score = 0;
 
     private List<Item_Data> inventory = new List<Item_Data>();
     public List<Item_Data> Inventory { get { return inventory; } }
