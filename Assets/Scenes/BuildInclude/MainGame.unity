@@ -2766,10 +2766,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1054678312107577738, guid: bc845cf28e6545641b6bf060ba329330, type: 3}
+      propertyPath: endValueV3.x
+      value: -400
+      objectReference: {fileID: 0}
     - target: {fileID: 2119003104003326270, guid: bc845cf28e6545641b6bf060ba329330, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6991765166612294685}
+    - target: {fileID: 4478889543758168471, guid: bc845cf28e6545641b6bf060ba329330, type: 3}
+      propertyPath: endValueV3.x
+      value: -400
+      objectReference: {fileID: 0}
     - target: {fileID: 4718412203298081670, guid: bc845cf28e6545641b6bf060ba329330, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2865,6 +2873,10 @@ PrefabInstance:
     - target: {fileID: 7426204900003683912, guid: bc845cf28e6545641b6bf060ba329330, type: 3}
       propertyPath: m_Name
       value: UICollection
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567179234713713182, guid: bc845cf28e6545641b6bf060ba329330, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

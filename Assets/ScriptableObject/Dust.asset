@@ -19,10 +19,10 @@ MonoBehaviour:
   Effect: Clean
   soundOnInteract:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 602497244
+      Data2: 1277772271
+      Data3: -1905752941
+      Data4: -1808395374
+    Path: event:/Interaction inside the map/Clean
   Interact_Obj: TrashCan
   Type: 0
