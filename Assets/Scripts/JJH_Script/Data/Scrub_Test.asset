@@ -16,7 +16,13 @@ MonoBehaviour:
   Item_sprite: {fileID: 21300000, guid: f2891bb270026a04fae1f7c92188d840, type: 3}
   Process_Time: 0.2
   IsFix: 0
-  Effect: Test
-  audioClip: {fileID: 0}
+  Effect: Bubble
+  soundOnInteract:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   Interact_Obj: 
   Type: 2

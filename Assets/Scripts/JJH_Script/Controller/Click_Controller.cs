@@ -34,6 +34,8 @@ public class Click_Controller : MonoBehaviour
             // Å¬¸¯
             if (Input.GetMouseButtonDown(0))
             {
+                Particle_Manager particle = Object_Pool.SpawnFromPool<Particle_Manager>("Particle", Camera.main.ScreenToWorldPoint(Input.mousePosition) + (Vector3.forward * 10));
+                particle.Particle_Create("Dust", 0.3f);
                 Dragging = false;
                 Scrubbing = false;
                 Getting = false;

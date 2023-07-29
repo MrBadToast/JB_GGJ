@@ -16,6 +16,13 @@ MonoBehaviour:
   Item_sprite: {fileID: -5177388603050735206, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
   Process_Time: 2
   IsFix: 0
-  Effect: Test
+  Effect: Clean
+  soundOnInteract:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   Interact_Obj: 
   Type: 0

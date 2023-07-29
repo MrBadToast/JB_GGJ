@@ -16,7 +16,13 @@ MonoBehaviour:
   Item_sprite: {fileID: 21300000, guid: 9bc91d9a1d6fed64795fee3c684e7f50, type: 3}
   Process_Time: 0
   IsFix: 0
-  Effect: 
-  audioClip: {fileID: 0}
+  Effect: Dust
+  soundOnInteract:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   Interact_Obj: Square
   Type: 1
