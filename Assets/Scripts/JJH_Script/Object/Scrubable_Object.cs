@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 using DG.Tweening;
 
 public class Scrubable_Object : MonoBehaviour, Item
@@ -31,6 +32,7 @@ public class Scrubable_Object : MonoBehaviour, Item
     }
     public void Off_Scrub()
     {
+        RuntimeManager.PlayOneShot(data.soundOnInteract);
         Click_Controller.instance.Interact(true);
     }
 }

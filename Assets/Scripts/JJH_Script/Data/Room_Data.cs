@@ -20,7 +20,11 @@ public class Room_Data : SerializedMonoBehaviour
 
     private void Start()
     {
-
+        Spawn_Item();
+        Spawn_Item();
+        Spawn_Item();
+        Spawn_Item();
+        Spawn_Item();
     }
 
     // Update is called once per frame
@@ -60,8 +64,10 @@ public class Room_Data : SerializedMonoBehaviour
                 if (vPoints[i].x < b_min_point.x) { b_min_point.x = vPoints[i].x; }
                 if (vPoints[i].y < b_min_point.y) { b_min_point.y = vPoints[i].y; }
             }
-            while (true)
+            int chk = 0;
+            while (chk < 300)
             {
+                chk++;
                 if (b_min_point == b_max_point) { set_pos = b_max_point; break; }
                 else
                 {

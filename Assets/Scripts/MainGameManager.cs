@@ -190,19 +190,19 @@ public class MainGameManager : MonoBehaviour
                     switch (task)
                     {
                         case 0:
-                            UI_Manager.Instance.alert.InvokeAlert("���� �߻�! ������ ���� ��鸳�ϴ�!");
+                            UI_Manager.Instance.alert.InvokeAlert("지진발생! 집안이 마구 흔들립니다!");
                             RuntimeManager.PlayOneShot(sound_earthquake);
                             break;
                         case 1:
-                            UI_Manager.Instance.alert.InvokeAlert("���� �߻�! ���� �������� ���ϴ�!");
+                            UI_Manager.Instance.alert.InvokeAlert("폭우발생! 집에 물난리가 납니다");
                             RuntimeManager.PlayOneShot(sound_storm);
                             break;
                         case 2:
-                            UI_Manager.Instance.alert.InvokeAlert("���! ������ ���� �������ϴ�!");
+                            UI_Manager.Instance.alert.InvokeAlert("비상! 벌레가 집을 더럽힙니다!");
                             RuntimeManager.PlayOneShot(sound_pest);
                             break;
                         case 3:
-                            UI_Manager.Instance.alert.InvokeAlert("������ Ż��! �������� ���� ���������ϴ�!");
+                            UI_Manager.Instance.alert.InvokeAlert("강아지 탈출! 강아지가 집안을 어지럽힙니다!");
                             RuntimeManager.PlayOneShot(sound_dog);
                             break;
                     }

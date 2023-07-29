@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 using DG.Tweening;
 
 public class Dragable_Object : MonoBehaviour, Item
@@ -53,6 +54,7 @@ public class Dragable_Object : MonoBehaviour, Item
     IEnumerator Clean(float time)
     {
         Click_Controller.instance.Interact(false);
+        RuntimeManager.PlayOneShot(data.soundOnInteract);
         Particle_Manager particle = Object_Pool.SpawnFromPool<Particle_Manager>("Particle", this.transform.position);
         particle.Particle_Create(data.Effect, data.Process_Time);
         yield return new WaitForSeconds(time);
