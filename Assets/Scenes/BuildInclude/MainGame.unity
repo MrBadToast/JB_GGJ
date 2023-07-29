@@ -309,6 +309,203 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!1 &884945906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 884945908}
+  - component: {fileID: 884945907}
+  m_Layer: 0
+  m_Name: DialogueContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &884945907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884945906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c973f085232f36844bc26d594f257f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: cutscene_dialogues
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LargeDialogueData[],
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Intro
+    - Name: $v
+      Entry: 7
+      Data: 2|LargeDialogueData[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 3|LargeDialogueData, Assembly-CSharp
+    - Name: speecher
+      Entry: 6
+      Data: 
+    - Name: SpeecherColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: context
+      Entry: 6
+      Data: 
+    - Name: fullImage
+      Entry: 6
+      Data: 
+    - Name: actions
+      Entry: 7
+      Data: 4|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
+    - Name: m_PersistentCalls
+      Entry: 7
+      Data: 5|UnityEngine.Events.PersistentCallGroup, UnityEngine.CoreModule
+    - Name: m_Calls
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[UnityEngine.Events.PersistentCall,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: disableCrossfade
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: GoodEnd
+    - Name: $v
+      Entry: 7
+      Data: 7|LargeDialogueData[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: BadEnd
+    - Name: $v
+      Entry: 7
+      Data: 8|LargeDialogueData[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+--- !u!4 &884945908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884945906}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1148651907
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +585,131 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851840d2149251441b17d9825f7ce52a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1866081996
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1852185961536239977, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: test_dialogues.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852185961536239977, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: test_dialogues.Array.data[0].context
+      value: Test1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852185961536239977, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: test_dialogues.Array.data[1].context
+      value: Test1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852185961536239977, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: test_dialogues.Array.data[2].context
+      value: Test1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852185961536239977, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: test_dialogues.Array.data[0].speecher
+      value: Speecher
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852185961536239977, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: test_dialogues.Array.data[1].speecher
+      value: Speecher
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852185961536239977, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: test_dialogues.Array.data[2].speecher
+      value: Speecher
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311714, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_Name
+      value: Large_Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123860384973311718, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ccd0ed9951ea1ad4b814c332a68e1287, type: 3}
 --- !u!1001 &1997799048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -493,6 +815,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1522745143284760664, guid: 7ace76acd8a81f04b9965c5ad276e4bf, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7137830233946789330, guid: 7ace76acd8a81f04b9965c5ad276e4bf, type: 3}
       propertyPath: m_Name
       value: Rooms
@@ -536,6 +862,10 @@ PrefabInstance:
     - target: {fileID: 7639380813582339966, guid: 7ace76acd8a81f04b9965c5ad276e4bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098854058774911507, guid: 7ace76acd8a81f04b9965c5ad276e4bf, type: 3}
+      propertyPath: m_Name
+      value: BedRoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -613,3 +943,5 @@ SceneRoots:
   - {fileID: 3369047221172955532}
   - {fileID: 1148651910}
   - {fileID: 374908978}
+  - {fileID: 1866081996}
+  - {fileID: 884945908}

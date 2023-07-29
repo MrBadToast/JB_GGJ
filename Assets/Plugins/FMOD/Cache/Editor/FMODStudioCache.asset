@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8988314771356618964
+--- !u!114 &-8224041649130762588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,14 +10,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI/ButtonClick
+  m_Name: event:/Interaction inside the map/Faucet Off
   m_EditorClassIdentifier: 
-  Path: event:/UI/ButtonClick
+  Path: event:/Interaction inside the map/Faucet Off
   Guid:
-    Data1: 656581436
-    Data2: 1086098420
-    Data3: -1510776927
-    Data4: 2024075457
+    Data1: 1893083890
+    Data2: 1221938309
+    Data3: 2072058528
+    Data4: -1137389249
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 9145114094208143230}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3498
+--- !u!114 &-7716063018200595003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction inside the map/Refrigerator
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction inside the map/Refrigerator
+  Guid:
+    Data1: 335513895
+    Data2: 1217106084
+    Data3: 889819299
+    Data4: -492292638
   Banks:
   - {fileID: -3231482475424078647}
   IsStream: 0
@@ -26,7 +54,223 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 367
+  Length: 554
+--- !u!114 &-6454883786601209282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction inside the map/Ashtray
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction inside the map/Ashtray
+  Guid:
+    Data1: -2118942376
+    Data2: 1084547818
+    Data3: 914647693
+    Data4: -2079107926
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1570
+--- !u!114 &-6218557291045967769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Situation/Organizing books
+  m_EditorClassIdentifier: 
+  Path: event:/Situation/Organizing books
+  Guid:
+    Data1: 1243203660
+    Data2: 1104917636
+    Data3: -478779970
+    Data4: -759037225
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 653
+--- !u!114 &-5709021036660682003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction inside the map/Blankets
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction inside the map/Blankets
+  Guid:
+    Data1: 2054255434
+    Data2: 1286367564
+    Data3: 1644041634
+    Data4: -1080513497
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4710
+--- !u!114 &-3882931795986276928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction inside the map/Lantern Off
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction inside the map/Lantern Off
+  Guid:
+    Data1: -67365756
+    Data2: 1254215351
+    Data3: 1259768969
+    Data4: 760657242
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 210
+--- !u!114 &-3874013467912097530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Situation/Organizing clothes
+  m_EditorClassIdentifier: 
+  Path: event:/Situation/Organizing clothes
+  Guid:
+    Data1: -681461917
+    Data2: 1171304444
+    Data3: -663414126
+    Data4: -1476570358
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5652
+--- !u!114 &-3725136609137771529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction inside the map/Shoe rack
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction inside the map/Shoe rack
+  Guid:
+    Data1: 1210770697
+    Data2: 1075942338
+    Data3: 87180684
+    Data4: -1380468892
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 790
+--- !u!114 &-3649448585499664118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Situation/Organizing Shoes
+  m_EditorClassIdentifier: 
+  Path: event:/Situation/Organizing Shoes
+  Guid:
+    Data1: 1306740703
+    Data2: 1076395449
+    Data3: -1845504365
+    Data4: 1437354514
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 653
+--- !u!114 &-3536981701564209705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction inside the map/Window
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction inside the map/Window
+  Guid:
+    Data1: -1886088253
+    Data2: 1132870742
+    Data3: -2007924048
+    Data4: 375637286
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 826
 --- !u!114 &-3231482475424078647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,9 +286,63 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 638261708135402126
+  lastModified: 638262431311604587
   FileSizes: []
   Exists: 1
+--- !u!114 &-1418863511655704335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction inside the map/Umbrella
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction inside the map/Umbrella
+  Guid:
+    Data1: 1590478932
+    Data2: 1278560096
+    Data3: -557330542
+    Data4: 691593730
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 221
+--- !u!114 &-759379916527396615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Situation/Throw Trash
+  m_EditorClassIdentifier: 
+  Path: event:/Situation/Throw Trash
+  Guid:
+    Data1: -1351399987
+    Data2: 1293647732
+    Data3: 1020090002
+    Data4: 522048392
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 269
 --- !u!114 &-687142782240778658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,11 +358,38 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638261708135412100
+  lastModified: 638262431311619677
   FileSizes:
   - Name: 
-    Value: 764
+    Value: 1756
   Exists: 1
+--- !u!114 &-72508355955794682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction inside the map/Filing
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction inside the map/Filing
+  Guid:
+    Data1: -2034503950
+    Data2: 1090373724
+    Data3: 1467753394
+    Data4: 2053502200
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1123
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,11 +406,268 @@ MonoBehaviour:
   - {fileID: -687142782240778658}
   - {fileID: -3231482475424078647}
   EditorEvents:
-  - {fileID: -8988314771356618964}
+  - {fileID: -3725136609137771529}
+  - {fileID: 2657946073919572205}
+  - {fileID: -7716063018200595003}
+  - {fileID: -5709021036660682003}
+  - {fileID: -6218557291045967769}
+  - {fileID: -1418863511655704335}
+  - {fileID: -6454883786601209282}
+  - {fileID: -3874013467912097530}
+  - {fileID: -3882931795986276928}
+  - {fileID: 1553191937060353511}
+  - {fileID: 2453090940064586575}
+  - {fileID: 6303453055623664621}
+  - {fileID: 5386926451836014100}
+  - {fileID: 6713679646705734773}
+  - {fileID: -3536981701564209705}
+  - {fileID: -759379916527396615}
+  - {fileID: -3649448585499664118}
+  - {fileID: 7730812048795283725}
+  - {fileID: -8224041649130762588}
+  - {fileID: -72508355955794682}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3231482475424078647}
   StringsBanks:
   - {fileID: -687142782240778658}
-  cacheTime: 638261708135412100
+  cacheTime: 638262431311619677
   cacheVersion: 131605
+--- !u!114 &1553191937060353511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction inside the map/TV
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction inside the map/TV
+  Guid:
+    Data1: 915113614
+    Data2: 1119004193
+    Data3: 1468029094
+    Data4: 94519052
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3041
+--- !u!114 &2453090940064586575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction inside the map/Carpet
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction inside the map/Carpet
+  Guid:
+    Data1: 1440518564
+    Data2: 1120894548
+    Data3: -1947709007
+    Data4: 1314691116
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 938
+--- !u!114 &2657946073919572205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Situation/Organizing Shower Supplies
+  m_EditorClassIdentifier: 
+  Path: event:/Situation/Organizing Shower Supplies
+  Guid:
+    Data1: -1276703730
+    Data2: 1207000618
+    Data3: -1827055229
+    Data4: 358279488
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1604
+--- !u!114 &5386926451836014100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction inside the map/Chair
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction inside the map/Chair
+  Guid:
+    Data1: 1363226802
+    Data2: 1183269618
+    Data3: 2130834861
+    Data4: 392677065
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 434
+--- !u!114 &6303453055623664621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/In Game BGM
+  m_EditorClassIdentifier: 
+  Path: event:/In Game BGM
+  Guid:
+    Data1: -124151378
+    Data2: 1086770347
+    Data3: -500616784
+    Data4: 2010429105
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6770068422642502446}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6713679646705734773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Situation/Organizing cushion
+  m_EditorClassIdentifier: 
+  Path: event:/Situation/Organizing cushion
+  Guid:
+    Data1: 1937540531
+    Data2: 1163291131
+    Data3: -130343766
+    Data4: 513353136
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1402
+--- !u!114 &6770068422642502446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/In Game BGM/BGM
+  m_EditorClassIdentifier: 
+  Name: BGM
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 320112618
+    data2: 2829362606
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7730812048795283725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Interaction inside the map/Washing Dishes
+  m_EditorClassIdentifier: 
+  Path: event:/Interaction inside the map/Washing Dishes
+  Guid:
+    Data1: -143080478
+    Data2: 1223725305
+    Data3: 328951457
+    Data4: -2108551701
+  Banks:
+  - {fileID: -3231482475424078647}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4000
+--- !u!114 &9145114094208143230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Faucet Off/Faucet
+  m_EditorClassIdentifier: 
+  Name: Faucet
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3251488552
+    data2: 2974553841
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1

@@ -6,6 +6,7 @@ using UnityEngine;
 public class MultipleRoomsManager : MonoBehaviour
 {
     [SerializeField] private SingleRoomBehavior[] rooms;
+    [SerializeField] public int RoomCount { get { return rooms.Length; } }
 
     [SerializeField,ReadOnly]private int currentRoomIndex = 0;
     public int CurrentRoomIndex { get { return currentRoomIndex; } }

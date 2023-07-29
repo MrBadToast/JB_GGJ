@@ -1,6 +1,8 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class MainGameManager : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class MainGameManager : MonoBehaviour
 
     [SerializeField] private float gameTime = 60f;
     public int score = 0;
+    [SerializeField,MinMaxSlider(1.0f,5.0f)] private Vector2 randomIncidentInterval;
+    [SerializeField] private float lastIncidentTime = 50f;
 
     private List<Item_Data> inventory = new List<Item_Data>();
     public List<Item_Data> Inventory { get { return inventory; } }
@@ -16,6 +20,7 @@ public class MainGameManager : MonoBehaviour
     private const int inventorySize = 5;
 
     public MultipleRoomsManager rooms;
+    public DialogueContainer dialogueCont;
 
     private float elapsedTime = 0f;
     public float ElapsedTime { get { return elapsedTime; } }
@@ -68,16 +73,38 @@ public class MainGameManager : MonoBehaviour
         StartCoroutine(Cor_MainGameSequence());
     }
 
+    public void InvokeIncident(int roomIndex)
+    {
+
+    }
+
+    float incidentTimer = 0f;
+
     private IEnumerator Cor_MainGameSequence()
     {
-        sequenceRunning = true;
+        yield return dialogueCont.StartCoroutine(dialogueCont.StartLargeDialogue("IntroCutscene"));
+
+        yield return new WaitForSeconds(2f);
 
         yield return UI_Manager.Instance.countDown.StartCoroutine(UI_Manager.Instance.countDown.Cor_CountDown());
 
         UI_Manager.Instance.StartOpen();
 
+        float nextIncidentTime = Random.Range(randomIncidentInterval.x, randomIncidentInterval.y);
+
         while(elapsedTime > gameTime)
         {
+            if (incidentTimer > gameTime - lastIncidentTime)
+            {
+                incidentTimer += Time.deltaTime;
+            }
+
+            if(incidentTimer > nextIncidentTime)
+            {
+                InvokeIncident(Random.Range(0, rooms.RoomCount));
+                
+            }
+
             elapsedTime += Time.deltaTime;
             yield return null;
         }

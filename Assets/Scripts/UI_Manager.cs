@@ -12,6 +12,7 @@ public class UI_Manager : MonoBehaviour
     public UI_Alert alert;
     public UI_BottomButtons bottomButtons;
     public UI_CountDown countDown;
+    public UI_LargeDialogue cutscene;
 
     private void Awake()
     {
