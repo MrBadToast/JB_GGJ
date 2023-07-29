@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,6 +8,7 @@ using UnityEngine.UI;
 public class UI_ItemPanel : MonoBehaviour
 {
     [SerializeField] private GameObject[] itemSlots;
+    [SerializeField] private DOTweenAnimation anim;
 
     public void SetSlots(Item_Data[] dataSet)
     {
@@ -15,6 +17,16 @@ public class UI_ItemPanel : MonoBehaviour
         {
             itemSlots[i].GetComponent<Image>().sprite = dataSet[i].Item_sprite;
         }
+    }
+
+    public void OpenItemSlot()
+    {
+        anim.DORestartById("Inventory_Open");
+    }
+
+    public void CloseItemSlot()
+    {
+        anim.DORestartById("Inventory_Close");
     }
 
     public void SelectSlot(int index)

@@ -19,5 +19,11 @@ public class UI_Manager : MonoBehaviour
         else { Destroy(gameObject); }
     }
 
+    public void StartOpen()
+    {
+        itemPanel.OpenItemSlot();
+        clock.OpenClock();
+        bottomButtons.OpenButtons();
+    }
 
 }

@@ -31,6 +31,11 @@ public class MainGameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        StartMainGameSequence();
+    }
+
     public bool AddItem(Item_Data item)
     {
         if(inventory.Count == inventorySize)
@@ -66,7 +71,9 @@ public class MainGameManager : MonoBehaviour
     {
         sequenceRunning = true;
 
-        yield return StartCoroutine(UI_Manager.Instance.countDown.Cor_CountDown());
+        yield return UI_Manager.Instance.countDown.StartCoroutine(UI_Manager.Instance.countDown.Cor_CountDown());
+
+        UI_Manager.Instance.StartOpen();
 
         while(elapsedTime > gameTime)
         {
