@@ -20,8 +20,7 @@ public class Room_Data : SerializedMonoBehaviour
 
     private void Start()
     {
-        // 임시 쓰레기 생성
-        for (int i = 0; i < 5; i++) { Spawn_Item(); }
+
     }
 
     // Update is called once per frame

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e568ac68e8c4054e89fa538134fc8b0, type: 3}
-  m_Name: FoodTrash
+  m_Name: Bug
   m_EditorClassIdentifier: 
-  Item_name: FoodTrash
-  Item_sprite: {fileID: 21300000, guid: 98c243dcc82c9c34db7eed0f5d23e89e, type: 3}
-  Process_Time: 0
+  Item_name: Bug
+  Item_sprite: {fileID: 21300000, guid: 41c609c18d0f8e545a5f30bd52902046, type: 3}
+  Process_Time: 2
   IsFix: 0
-  Effect: Scrub
+  Effect: Clean
   soundOnInteract:
     Guid:
       Data1: 0
@@ -24,5 +24,5 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  Interact_Obj: WorkTable
-  Type: 1
+  Interact_Obj: 
+  Type: 0

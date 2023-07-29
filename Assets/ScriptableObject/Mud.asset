@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Item_name: Mud
   Item_sprite: {fileID: 21300000, guid: 6f62c6b23e5ccf34b95c5800da8c5fc2, type: 3}
-  Process_Time: 2
+  Process_Time: 0.2
   IsFix: 0
   Effect: Scrub
   soundOnInteract:

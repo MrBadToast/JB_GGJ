@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Book2
   m_EditorClassIdentifier: 
   Item_name: Trash
-  Item_sprite: {fileID: 21300000, guid: a0263bf328f516747a53b89126a3d589, type: 3}
-  Process_Time: 2
+  Item_sprite: {fileID: 21300000, guid: 7a4205b83a063f44d90840b2bb8c56ac, type: 3}
+  Process_Time: 0
   IsFix: 0
-  Effect: Clean
+  Effect: Dust
   soundOnInteract:
     Guid:
       Data1: 0
