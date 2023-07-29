@@ -43,7 +43,6 @@ public class UI_LargeDialogue : MonoBehaviour
 
     public IEnumerator Cor_PlayDialogue(LargeDialogueData[] dialogues)
     {
-        Debug.Log("DDDD");
 
         DialogueGroup.SetActive(true);
 

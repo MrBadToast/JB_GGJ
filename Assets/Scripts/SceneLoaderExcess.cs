@@ -7,4 +7,9 @@ public class SceneLoaderExcess : MonoBehaviour
         if (LoadingSceneController.Instance != null)
             LoadingSceneController.Instance.LoadScene(sceneName);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
