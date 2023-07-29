@@ -5,10 +5,10 @@ using UnityEngine;
 public class Click_Controller : MonoBehaviour
 {
     public static Click_Controller instance = null;
-    GameObject target;
+    public GameObject target;
     Vector2 Click_Pos;
     Vector2 Scrub_Pos;
-    bool Dragging;
+    public bool Dragging;
     bool Scrubbing;
     public bool Can_Interact;
     public void Awake()

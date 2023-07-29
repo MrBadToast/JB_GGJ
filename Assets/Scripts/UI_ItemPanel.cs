@@ -13,11 +13,24 @@ public class UI_ItemPanel : MonoBehaviour
     public void SetSlots(Item_Data[] dataSet)
     {
         Deselect();
-       for(int i = 0; i < dataSet.Length; i++)
+        for(int i = 0; i < dataSet.Length; i++)
         {
             itemSlots[i].GetComponent<Image>().sprite = dataSet[i].Item_sprite;
         }
     }
+
+    public void Add_Item() { MainGameManager.Instance.AddItem(Click_Controller.instance.target.GetComponent<Dragable_Object>()?.data); Debug.Log(Click_Controller.instance.target.GetComponent<Dragable_Object>()?.data); }
+    public void Get_Item(int num) 
+    {
+        var item = MainGameManager.Instance.GetItem(num);
+        Dragable_Object d_obj = Object_Pool.SpawnFromPool<Dragable_Object>("Dragable_Object", Vector3.zero);
+        d_obj.Set_Obj(item);
+        d_obj.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Click_Controller.instance.target = d_obj.transform.gameObject;
+        Click_Controller.instance.Dragging = true;
+        MainGameManager.Instance.RemoveItemAt(num);
+    }
+
 
     public void OpenItemSlot()
     {
