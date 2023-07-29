@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8418188500481150383}
   - component: {fileID: 7572151559404113067}
   - component: {fileID: 5181759244786187714}
-  - component: {fileID: 174833315671063950}
+  - component: {fileID: 5020508587858935018}
   m_Layer: 0
   m_Name: Scrubable_Obj
   m_TagString: Untagged
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
---- !u!114 &174833315671063950
+--- !u!114 &5020508587858935018
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -21,7 +21,7 @@ public class Object_Pool_Editor : Editor
 #endif
 public class Object_Pool : MonoBehaviour
 {
-	static Object_Pool inst;
+	public static Object_Pool inst;
 
 	[Serializable]
 	public class Pool
@@ -111,6 +111,18 @@ public class Object_Pool : MonoBehaviour
 		}
 		// 큐에서 꺼내서 사용
 		GameObject objectToSpawn = poolQueue.Dequeue();
+		if (objectToSpawn.activeSelf)
+		{
+			poolQueue.Enqueue(objectToSpawn);
+            try { objectToSpawn = _SpawnFromPool(tag, position, rotation); } 
+			catch (StackOverflowException)
+			{
+				Pool pool = Array.Find(pools, x => x.tag == tag);
+				var obj = CreateNewObject(pool.tag, pool.prefab);
+				ArrangePool(obj);
+				objectToSpawn = obj;
+			}
+		}
 		objectToSpawn.transform.position = position;
 		objectToSpawn.transform.rotation = rotation;
 		objectToSpawn.SetActive(true);

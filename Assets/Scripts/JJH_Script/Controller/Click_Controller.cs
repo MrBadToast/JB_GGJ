@@ -6,8 +6,10 @@ public class Click_Controller : MonoBehaviour
 {
     public static Click_Controller instance = null;
     public GameObject target;
-    Vector2 Click_Pos;
+    public Vector2 Click_Pos;
     Vector2 Scrub_Pos;
+    public bool Getting;
+    public int Get_num;
     public bool Dragging;
     bool Scrubbing;
     public bool Can_Interact;
@@ -34,6 +36,7 @@ public class Click_Controller : MonoBehaviour
             {
                 Dragging = false;
                 Scrubbing = false;
+                Getting = false;
                 hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.forward, 100);
                 if (hit)
                 {
@@ -67,6 +70,11 @@ public class Click_Controller : MonoBehaviour
             // 끝
             if (Input.GetMouseButtonUp(0) && target != null)
             {
+                // 혹시 꺼낸 아이템이라면
+                if (Getting)
+                {
+                    MainGameManager.Instance.RemoveItemAt(Get_num);
+                }
                 Debug.Log($"{target.transform.gameObject}를 놨다!");
                 Dragging = false;
                 Scrubbing = false;
