@@ -19,11 +19,10 @@ public class LoadingSceneController : MonoBehaviour
     private void Awake()
     {
         if(instance == null)
-        { instance = this; }
+        { instance = this; DontDestroyOnLoad(gameObject); }
         else
         {
             Destroy(gameObject);
-            DontDestroyOnLoad(gameObject);
         }
     }
 

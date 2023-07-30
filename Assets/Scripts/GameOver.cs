@@ -7,6 +7,6 @@ public class GameOver : MonoBehaviour
 {
     public void RestartGame()
     {
-        LoadingSceneController.Instance.LoadScene(SceneManager.GetActiveScene().name);
+        LoadingSceneController.Instance.LoadScene("MainGame");
     }
 }
