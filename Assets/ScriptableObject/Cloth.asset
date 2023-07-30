@@ -26,3 +26,4 @@ MonoBehaviour:
     Path: event:/Interaction inside the map/Blankets
   Interact_Obj: Table
   Type: 1
+  outlineColor: {fileID: 2100000, guid: f1b8dae467f95dc4f8550a9657d46b7b, type: 2}

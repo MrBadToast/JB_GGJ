@@ -84,7 +84,7 @@ public class UI_LargeDialogue : MonoBehaviour
                 if (skipFlag) break;
 
             }
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(2.0f);
             triangle.SetActive(true);
             yield return new WaitUntil(() => Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.Space));
             triangle.SetActive(false);

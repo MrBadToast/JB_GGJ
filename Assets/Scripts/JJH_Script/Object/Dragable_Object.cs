@@ -22,6 +22,7 @@ public class Dragable_Object : MonoBehaviour, Item
     {
         data = _data;
         srr.sprite = data.Item_sprite;
+        srr.material = _data.outlineColor;
     }
     public void On_Click() { Is_Drag = false; }
     public void On_Drag()

@@ -26,3 +26,4 @@ MonoBehaviour:
     Path: event:/Sweep
   Interact_Obj: BathDrawer
   Type: 1
+  outlineColor: {fileID: 2100000, guid: 3e587f22f2d21cc4292b6ad723dbe974, type: 2}

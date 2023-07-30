@@ -26,3 +26,4 @@ MonoBehaviour:
     Path: event:/Situation/Throw Trash
   Interact_Obj: WorkTable
   Type: 1
+  outlineColor: {fileID: 2100000, guid: 5da2cad2af32f1945b102766d6440394, type: 2}

@@ -26,3 +26,4 @@ MonoBehaviour:
     Path: event:/Situation/Organizing books
   Interact_Obj: BookShelf
   Type: 1
+  outlineColor: {fileID: 2100000, guid: f10b4a6e5fc04ef4cae0fc573e2ee61b, type: 2}

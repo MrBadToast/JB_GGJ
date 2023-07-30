@@ -39,4 +39,5 @@ public class Item_Data : ScriptableObject
     public EventReference soundOnInteract;
     public string Interact_Obj;
     public Item_Type Type;
+    public Material outlineColor;
 }

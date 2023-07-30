@@ -61,7 +61,11 @@ public class MultipleRoomsManager : SerializedMonoBehaviour
             foreach(string key in _data.Toggles.Keys)
             {
                 //if (key == "Window" && 환경이상) { }
-                if (_data.Toggles[key].Toggle) { toggle_count++; }
+                if (_data == null) continue;
+                if (_data.Toggles.ContainsKey(key))
+                {
+                    if (_data.Toggles[key].Toggle) { toggle_count++; }
+                }
             }
             for(int i = 0; i < _data.transform.childCount; i++)
             {

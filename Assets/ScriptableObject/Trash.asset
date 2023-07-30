@@ -26,3 +26,4 @@ MonoBehaviour:
     Path: event:/Sweep
   Interact_Obj: TrashCan
   Type: 1
+  outlineColor: {fileID: 2100000, guid: a0a695e96c0064b4cbfc83961662a735, type: 2}
