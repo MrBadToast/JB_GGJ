@@ -8,11 +8,17 @@ public class EndingSceneBehavior : MonoBehaviour
 
     private void Start()
     {
-        dialogue.StartCoroutine(dialogue.StartLargeDialogue("Ending"));
+        StartCoroutine(Cor_Delayed());
     }
 
     public void RestartEntireGame()
     {
         LoadingSceneController.Instance.LoadScene("MainTitle");
+    }
+
+    IEnumerator Cor_Delayed()
+    {
+        yield return new WaitForEndOfFrame();
+        dialogue.StartCoroutine(dialogue.StartLargeDialogue("Ending"));
     }
 }

@@ -190,7 +190,7 @@ public class MainGameManager : MonoBehaviour
                     switch (task)
                     {
                         case 0:
-                            UI_Manager.Instance.alert.InvokeAlert("ì§€ì§„ë°œìƒ! ì§‘ì•ˆì´ ë§ˆêµ¬ í”ë“¤ë¦½ë‹ˆë‹¤!");
+                            UI_Manager.Instance.alert.InvokeAlert("ÁöÁø ¹ß»ı! Áı¾ÈÀÌ ¸¶±¸ Èçµé¸³´Ï´Ù!");
                             RuntimeManager.PlayOneShot(sound_earthquake);
                             for(int i = 0; i < 3; i++)
                             {
@@ -199,7 +199,7 @@ public class MainGameManager : MonoBehaviour
                             }
                             break;
                         case 1:
-                            UI_Manager.Instance.alert.InvokeAlert("í­ìš°ë°œìƒ! ì§‘ì— ë¬¼ë‚œë¦¬ê°€ ë‚©ë‹ˆë‹¤");
+                            UI_Manager.Instance.alert.InvokeAlert("Æø¿ì ¹ß»ı! Áı¿¡ ¹°³­¸®°¡ ³³´Ï´Ù!");
                             RuntimeManager.PlayOneShot(sound_storm);
                             for (int i = 0; i < 2; i++)
                             {
@@ -208,7 +208,7 @@ public class MainGameManager : MonoBehaviour
                             }
                             break;
                         case 2:
-                            UI_Manager.Instance.alert.InvokeAlert("ë¹„ìƒ! ë²Œë ˆê°€ ì§‘ì„ ë”ëŸ½í™ë‹ˆë‹¤!");
+                            UI_Manager.Instance.alert.InvokeAlert("ºñ»ó! ¹ú·¹°¡ ÁıÀ» ´õ·´Èü´Ï´Ù!");
                             RuntimeManager.PlayOneShot(sound_pest);
                             for (int i = 0; i < 3; i++)
                             {
@@ -217,7 +217,7 @@ public class MainGameManager : MonoBehaviour
                             }
                             break;
                         case 3:
-                            UI_Manager.Instance.alert.InvokeAlert("ê°•ì•„ì§€ íƒˆì¶œ! ê°•ì•„ì§€ê°€ ì§‘ì•ˆì„ ì–´ì§€ëŸ½í™ë‹ˆë‹¤!");
+                            UI_Manager.Instance.alert.InvokeAlert("°­¾ÆÁö Å»Ãâ! °­¾ÆÁö°¡ Áı¾ÈÀ» ¾îÁö·´Èü´Ï´Ù!");
                             RuntimeManager.PlayOneShot(sound_dog);
                             for (int i = 0; i < 2; i++)
                             {
